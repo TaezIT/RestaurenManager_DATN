@@ -9,10 +9,6 @@
 import UIKit
 
 class MainTabBarViewController: UITabBarController {
-    
-    enum ItemsValue : Int {
-        case Restaurant = 0, Kitchen, Storage, Manager, FeatureMenu
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,14 +8,9 @@
 
 import UIKit
 
-protocol OrderViewControllerDelegate: class {
+protocol OrderViewControllerDelegate: NSObject {
     var table: BanAn? { get set }
     func changeOrderAmount(dish: MonAn, amount: Int)
-}
-
-enum CartState {
-    case expended
-    case collapsed
 }
 
 class MakeOrderViewController: UIViewController {

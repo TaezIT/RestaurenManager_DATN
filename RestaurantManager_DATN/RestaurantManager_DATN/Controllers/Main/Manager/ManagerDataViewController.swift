@@ -8,11 +8,7 @@
 
 import UIKit
 
-enum ManageType: Int {
-    case table = 0, bill, staff, dishCategory, dish, importBill, exportBill, report
-}
-
-protocol ManagerPickedData: class {
+protocol ManagerPickedData: NSObject {
     func dataWasPicked(data: Any)
 }
 

@@ -29,7 +29,6 @@
 		84F706C929C449E0000CA7E2 /* HoaDon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F706C029C449E0000CA7E2 /* HoaDon.swift */; };
 		84F706CA29C449E0000CA7E2 /* PhieuNhap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F706C129C449E0000CA7E2 /* PhieuNhap.swift */; };
 		84F706CB29C449E0000CA7E2 /* TheLoaiMonAn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F706C229C449E0000CA7E2 /* TheLoaiMonAn.swift */; };
-		8F104D0029C0D98100AC95F4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104CFF29C0D98100AC95F4 /* File.swift */; };
 		8F104D0C29C37A5400AC95F4 /* RestaurantManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104D0A29C37A5400AC95F4 /* RestaurantManagerViewController.swift */; };
 		8F104D0D29C37A5400AC95F4 /* RestaurantManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D0B29C37A5400AC95F4 /* RestaurantManagerViewController.xib */; };
 		8F104D5929C383A800AC95F4 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D2729C383A700AC95F4 /* SF-Pro-Display-Regular.otf */; };
@@ -55,6 +54,7 @@
 		8F104D7029C383A800AC95F4 /* Merriweather-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D4129C383A800AC95F4 /* Merriweather-Italic.ttf */; };
 		8F104D7129C383A800AC95F4 /* Merriweather-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D4229C383A800AC95F4 /* Merriweather-Black.ttf */; };
 		8F104D7229C383A800AC95F4 /* Merriweather-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D4329C383A800AC95F4 /* Merriweather-LightItalic.ttf */; };
+		8F104D8929C4C52700AC95F4 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104D8829C4C52700AC95F4 /* Enum.swift */; };
 		F738CFC524894E1B003F8295 /* TableBillDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738CFC424894E1B003F8295 /* TableBillDetailViewController.swift */; };
 		F73D0E4C23E2D1D6006D8A30 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D0E4B23E2D1D6006D8A30 /* UIViewController+.swift */; };
 		F73D0E5023E2E51A006D8A30 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D0E4F23E2E51A006D8A30 /* App.swift */; };
@@ -136,7 +136,6 @@
 		84F706C029C449E0000CA7E2 /* HoaDon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoaDon.swift; sourceTree = "<group>"; };
 		84F706C129C449E0000CA7E2 /* PhieuNhap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhieuNhap.swift; sourceTree = "<group>"; };
 		84F706C229C449E0000CA7E2 /* TheLoaiMonAn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheLoaiMonAn.swift; sourceTree = "<group>"; };
-		8F104CFF29C0D98100AC95F4 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		8F104D0A29C37A5400AC95F4 /* RestaurantManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantManagerViewController.swift; sourceTree = "<group>"; };
 		8F104D0B29C37A5400AC95F4 /* RestaurantManagerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantManagerViewController.xib; sourceTree = "<group>"; };
 		8F104D2729C383A700AC95F4 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
@@ -162,6 +161,7 @@
 		8F104D4129C383A800AC95F4 /* Merriweather-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Italic.ttf"; sourceTree = "<group>"; };
 		8F104D4229C383A800AC95F4 /* Merriweather-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Black.ttf"; sourceTree = "<group>"; };
 		8F104D4329C383A800AC95F4 /* Merriweather-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-LightItalic.ttf"; sourceTree = "<group>"; };
+		8F104D8829C4C52700AC95F4 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		E89FA3BDFFFCFB7812D2DDFF /* Pods_RestaurantManager_DATN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantManager_DATN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F738CFC424894E1B003F8295 /* TableBillDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBillDetailViewController.swift; sourceTree = "<group>"; };
 		F73D0E4B23E2D1D6006D8A30 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
@@ -280,20 +280,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		84F706CC29C464B7000CA7E2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		84F706CD29C464C3000CA7E2 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		8F104D0129C3742500AC95F4 /* ClassCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,8 +300,8 @@
 		8F104D0929C379E900AC95F4 /* RestaurantManager */ = {
 			isa = PBXGroup;
 			children = (
-				84F706CD29C464C3000CA7E2 /* ViewModel */,
-				84F706CC29C464B7000CA7E2 /* Model */,
+				8F104D8B29C4C78800AC95F4 /* ViewModel */,
+				8F104D8A29C4C78000AC95F4 /* Model */,
 				8F104D0429C3796600AC95F4 /* ViewController */,
 			);
 			path = RestaurantManager;
@@ -383,6 +369,33 @@
 			path = Merriweather;
 			sourceTree = "<group>";
 		};
+		8F104D8629C4C50000AC95F4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F73D0E5123E2E725006D8A30 /* UIStoryboard+.swift */,
+				F73D0E4B23E2D1D6006D8A30 /* UIViewController+.swift */,
+				F7A682E324711752006D8058 /* Date+.swift */,
+				F747337924712CAD00D0E3FC /* Double+.swift */,
+				F747F9B0249BBA8400B82307 /* UITextfield+.swift */,
+				562442C724CAD87C00754A76 /* Float+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8F104D8A29C4C78000AC95F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8F104D8B29C4C78800AC95F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		CCD323CA21DF563C5D8089A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,9 +443,10 @@
 		F7409C5A23E187100037652A /* RestaurantManager_DATN */ = {
 			isa = PBXGroup;
 			children = (
-				8F104D0E29C3837800AC95F4 /* Resources */,
-				8F104D0129C3742500AC95F4 /* ClassCode */,
 				F7AD51D723E41685008DFF3A /* App */,
+				8F104D0129C3742500AC95F4 /* ClassCode */,
+				8F104D0E29C3837800AC95F4 /* Resources */,
+				8F104D8629C4C50000AC95F4 /* Extension */,
 				F7AD51D923E4169C008DFF3A /* Helpers */,
 				F7AD51D823E41692008DFF3A /* Controllers */,
 				84F706B929C449E0000CA7E2 /* Model */,
@@ -638,13 +652,7 @@
 		F7AD51D923E4169C008DFF3A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				F73D0E5123E2E725006D8A30 /* UIStoryboard+.swift */,
-				F73D0E4B23E2D1D6006D8A30 /* UIViewController+.swift */,
-				F7A682E324711752006D8058 /* Date+.swift */,
-				F747337924712CAD00D0E3FC /* Double+.swift */,
-				F747F9B0249BBA8400B82307 /* UITextfield+.swift */,
-				562442C724CAD87C00754A76 /* Float+.swift */,
-				8F104CFF29C0D98100AC95F4 /* File.swift */,
+				8F104D8829C4C52700AC95F4 /* Enum.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -848,7 +856,6 @@
 				562442C824CAD87C00754A76 /* Float+.swift in Sources */,
 				F7409C5C23E187100037652A /* AppDelegate.swift in Sources */,
 				5625F16324CECF1C00AAA65E /* CallManagerView.swift in Sources */,
-				8F104D0029C0D98100AC95F4 /* File.swift in Sources */,
 				F747F9B1249BBA8400B82307 /* UITextfield+.swift in Sources */,
 				84F706C829C449E0000CA7E2 /* PhieuXuat.swift in Sources */,
 				84F706CB29C449E0000CA7E2 /* TheLoaiMonAn.swift in Sources */,
@@ -872,6 +879,7 @@
 				F741307F23EFFC4900032E13 /* StorageItemsTableViewCell.swift in Sources */,
 				F749AD2924A85DE2006C2318 /* AddStaffManagerViewController.swift in Sources */,
 				F7A682E424711752006D8058 /* Date+.swift in Sources */,
+				8F104D8929C4C52700AC95F4 /* Enum.swift in Sources */,
 				84F706C529C449E0000CA7E2 /* Order.swift in Sources */,
 				F75287A723EEA649007A9621 /* MakeOrderViewController.swift in Sources */,
 				F7EC5E2F248C9E9D00ABE621 /* TableManagerViewController.swift in Sources */,

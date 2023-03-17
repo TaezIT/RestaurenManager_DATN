@@ -8,10 +8,6 @@
 
 import UIKit
 
-enum TableState: Int {
-    case empty, inUsed, waiting
-}
-
 final class TableCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imvTable: UIImageView!
