@@ -20,30 +20,18 @@
 		5629C4A224C29E5000006F4D /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5629C4A124C29E5000006F4D /* Cell.swift */; };
 		8441DB05299B2D5100165FBB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8441DB04299B2D5100165FBB /* GoogleService-Info.plist */; };
 		8441DB06299B442F00165FBB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7409C5F23E187100037652A /* LoginViewController.swift */; };
+		84F706C329C449E0000CA7E2 /* MonAn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F706BA29C449E0000CA7E2 /* MonAn.swift */; };
+		84F706C429C449E0000CA7E2 /* NhanVien.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F706BB29C449E0000CA7E2 /* NhanVien.swift */; };
+		84F706C529C449E0000CA7E2 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F706BC29C449E0000CA7E2 /* Order.swift */; };
+		84F706C629C449E0000CA7E2 /* BanAn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F706BD29C449E0000CA7E2 /* BanAn.swift */; };
+		84F706C729C449E0000CA7E2 /* BaoCao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F706BE29C449E0000CA7E2 /* BaoCao.swift */; };
+		84F706C829C449E0000CA7E2 /* PhieuXuat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F706BF29C449E0000CA7E2 /* PhieuXuat.swift */; };
+		84F706C929C449E0000CA7E2 /* HoaDon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F706C029C449E0000CA7E2 /* HoaDon.swift */; };
+		84F706CA29C449E0000CA7E2 /* PhieuNhap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F706C129C449E0000CA7E2 /* PhieuNhap.swift */; };
+		84F706CB29C449E0000CA7E2 /* TheLoaiMonAn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F706C229C449E0000CA7E2 /* TheLoaiMonAn.swift */; };
 		8F104D0029C0D98100AC95F4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104CFF29C0D98100AC95F4 /* File.swift */; };
 		8F104D0C29C37A5400AC95F4 /* RestaurantManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104D0A29C37A5400AC95F4 /* RestaurantManagerViewController.swift */; };
 		8F104D0D29C37A5400AC95F4 /* RestaurantManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D0B29C37A5400AC95F4 /* RestaurantManagerViewController.xib */; };
-		8F104D4429C383A800AC95F4 /* SanFranciscoDisplay-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D1129C383A700AC95F4 /* SanFranciscoDisplay-Heavy.otf */; };
-		8F104D4529C383A800AC95F4 /* SanFranciscoText-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D1229C383A700AC95F4 /* SanFranciscoText-RegularItalic.otf */; };
-		8F104D4629C383A800AC95F4 /* SanFranciscoText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D1329C383A700AC95F4 /* SanFranciscoText-Regular.otf */; };
-		8F104D4729C383A800AC95F4 /* SanFranciscoDisplay-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D1429C383A700AC95F4 /* SanFranciscoDisplay-Ultralight.otf */; };
-		8F104D4829C383A800AC95F4 /* SanFranciscoText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D1529C383A700AC95F4 /* SanFranciscoText-Bold.otf */; };
-		8F104D4929C383A800AC95F4 /* SanFranciscoDisplay-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D1629C383A700AC95F4 /* SanFranciscoDisplay-Light.otf */; };
-		8F104D4A29C383A800AC95F4 /* SanFranciscoText-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D1729C383A700AC95F4 /* SanFranciscoText-BoldItalic.otf */; };
-		8F104D4B29C383A800AC95F4 /* SanFranciscoText-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D1829C383A700AC95F4 /* SanFranciscoText-HeavyItalic.otf */; };
-		8F104D4C29C383A800AC95F4 /* SanFranciscoText-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D1929C383A700AC95F4 /* SanFranciscoText-LightItalic.otf */; };
-		8F104D4D29C383A800AC95F4 /* SanFranciscoText-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D1A29C383A700AC95F4 /* SanFranciscoText-SemiBoldItalic.otf */; };
-		8F104D4E29C383A800AC95F4 /* SanFranciscoDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D1B29C383A700AC95F4 /* SanFranciscoDisplay-Regular.otf */; };
-		8F104D4F29C383A800AC95F4 /* SanFranciscoDisplay-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D1C29C383A700AC95F4 /* SanFranciscoDisplay-Black.otf */; };
-		8F104D5029C383A800AC95F4 /* SanFranciscoDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D1D29C383A700AC95F4 /* SanFranciscoDisplay-Bold.otf */; };
-		8F104D5129C383A800AC95F4 /* SanFranciscoText-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D1E29C383A700AC95F4 /* SanFranciscoText-Heavy.otf */; };
-		8F104D5229C383A800AC95F4 /* SanFranciscoText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D1F29C383A700AC95F4 /* SanFranciscoText-Medium.otf */; };
-		8F104D5329C383A800AC95F4 /* SanFranciscoText-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D2029C383A700AC95F4 /* SanFranciscoText-MediumItalic.otf */; };
-		8F104D5429C383A800AC95F4 /* SanFranciscoText-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D2129C383A700AC95F4 /* SanFranciscoText-SemiBold.otf */; };
-		8F104D5529C383A800AC95F4 /* SanFranciscoDisplay-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D2229C383A700AC95F4 /* SanFranciscoDisplay-Thin.otf */; };
-		8F104D5629C383A800AC95F4 /* SanFranciscoText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D2329C383A700AC95F4 /* SanFranciscoText-Light.otf */; };
-		8F104D5729C383A800AC95F4 /* SanFranciscoDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D2429C383A700AC95F4 /* SanFranciscoDisplay-Medium.otf */; };
-		8F104D5829C383A800AC95F4 /* SanFranciscoDisplay-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D2529C383A700AC95F4 /* SanFranciscoDisplay-SemiBold.otf */; };
 		8F104D5929C383A800AC95F4 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D2729C383A700AC95F4 /* SF-Pro-Display-Regular.otf */; };
 		8F104D5A29C383A800AC95F4 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D2829C383A700AC95F4 /* SF-Pro-Display-Bold.otf */; };
 		8F104D5B29C383A800AC95F4 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D2929C383A700AC95F4 /* SF-Pro-Display-Medium.otf */; };
@@ -59,9 +47,6 @@
 		8F104D6529C383A800AC95F4 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D3429C383A700AC95F4 /* Inter-Black.ttf */; };
 		8F104D6629C383A800AC95F4 /* Inter-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D3529C383A700AC95F4 /* Inter-Italic.ttf */; };
 		8F104D6729C383A800AC95F4 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D3629C383A700AC95F4 /* Inter-SemiBold.ttf */; };
-		8F104D6829C383A800AC95F4 /* NotoSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D3829C383A700AC95F4 /* NotoSerif-Regular.ttf */; };
-		8F104D6929C383A800AC95F4 /* NotoSerif-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D3929C383A700AC95F4 /* NotoSerif-SemiBold.ttf */; };
-		8F104D6A29C383A800AC95F4 /* NotoSerif-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D3A29C383A700AC95F4 /* NotoSerif-Bold.ttf */; };
 		8F104D6B29C383A800AC95F4 /* Merriweather-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D3C29C383A800AC95F4 /* Merriweather-Bold.ttf */; };
 		8F104D6C29C383A800AC95F4 /* Merriweather-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D3D29C383A800AC95F4 /* Merriweather-Regular.ttf */; };
 		8F104D6D29C383A800AC95F4 /* Merriweather-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D3E29C383A800AC95F4 /* Merriweather-Light.ttf */; };
@@ -70,15 +55,6 @@
 		8F104D7029C383A800AC95F4 /* Merriweather-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D4129C383A800AC95F4 /* Merriweather-Italic.ttf */; };
 		8F104D7129C383A800AC95F4 /* Merriweather-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D4229C383A800AC95F4 /* Merriweather-Black.ttf */; };
 		8F104D7229C383A800AC95F4 /* Merriweather-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D4329C383A800AC95F4 /* Merriweather-LightItalic.ttf */; };
-		8F104D7D29C386E900AC95F4 /* MonAn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104D7429C386E900AC95F4 /* MonAn.swift */; };
-		8F104D7E29C386E900AC95F4 /* NhanVien.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104D7529C386E900AC95F4 /* NhanVien.swift */; };
-		8F104D7F29C386E900AC95F4 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104D7629C386E900AC95F4 /* Order.swift */; };
-		8F104D8029C386E900AC95F4 /* BanAn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104D7729C386E900AC95F4 /* BanAn.swift */; };
-		8F104D8129C386E900AC95F4 /* BaoCao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104D7829C386E900AC95F4 /* BaoCao.swift */; };
-		8F104D8229C386E900AC95F4 /* PhieuXuat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104D7929C386E900AC95F4 /* PhieuXuat.swift */; };
-		8F104D8329C386E900AC95F4 /* HoaDon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104D7A29C386E900AC95F4 /* HoaDon.swift */; };
-		8F104D8429C386E900AC95F4 /* PhieuNhap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104D7B29C386E900AC95F4 /* PhieuNhap.swift */; };
-		8F104D8529C386E900AC95F4 /* TheLoaiMonAn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104D7C29C386E900AC95F4 /* TheLoaiMonAn.swift */; };
 		F738CFC524894E1B003F8295 /* TableBillDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738CFC424894E1B003F8295 /* TableBillDetailViewController.swift */; };
 		F73D0E4C23E2D1D6006D8A30 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D0E4B23E2D1D6006D8A30 /* UIViewController+.swift */; };
 		F73D0E5023E2E51A006D8A30 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D0E4F23E2E51A006D8A30 /* App.swift */; };
@@ -151,30 +127,18 @@
 		5629C4A124C29E5000006F4D /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		7E3E9228B1AABE7F753B9E11 /* Pods-RestaurantManager_DATN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantManager_DATN.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantManager_DATN/Pods-RestaurantManager_DATN.debug.xcconfig"; sourceTree = "<group>"; };
 		8441DB04299B2D5100165FBB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84F706BA29C449E0000CA7E2 /* MonAn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonAn.swift; sourceTree = "<group>"; };
+		84F706BB29C449E0000CA7E2 /* NhanVien.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NhanVien.swift; sourceTree = "<group>"; };
+		84F706BC29C449E0000CA7E2 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		84F706BD29C449E0000CA7E2 /* BanAn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanAn.swift; sourceTree = "<group>"; };
+		84F706BE29C449E0000CA7E2 /* BaoCao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaoCao.swift; sourceTree = "<group>"; };
+		84F706BF29C449E0000CA7E2 /* PhieuXuat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhieuXuat.swift; sourceTree = "<group>"; };
+		84F706C029C449E0000CA7E2 /* HoaDon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoaDon.swift; sourceTree = "<group>"; };
+		84F706C129C449E0000CA7E2 /* PhieuNhap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhieuNhap.swift; sourceTree = "<group>"; };
+		84F706C229C449E0000CA7E2 /* TheLoaiMonAn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheLoaiMonAn.swift; sourceTree = "<group>"; };
 		8F104CFF29C0D98100AC95F4 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		8F104D0A29C37A5400AC95F4 /* RestaurantManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantManagerViewController.swift; sourceTree = "<group>"; };
 		8F104D0B29C37A5400AC95F4 /* RestaurantManagerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantManagerViewController.xib; sourceTree = "<group>"; };
-		8F104D1129C383A700AC95F4 /* SanFranciscoDisplay-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Heavy.otf"; sourceTree = "<group>"; };
-		8F104D1229C383A700AC95F4 /* SanFranciscoText-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-RegularItalic.otf"; sourceTree = "<group>"; };
-		8F104D1329C383A700AC95F4 /* SanFranciscoText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Regular.otf"; sourceTree = "<group>"; };
-		8F104D1429C383A700AC95F4 /* SanFranciscoDisplay-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Ultralight.otf"; sourceTree = "<group>"; };
-		8F104D1529C383A700AC95F4 /* SanFranciscoText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Bold.otf"; sourceTree = "<group>"; };
-		8F104D1629C383A700AC95F4 /* SanFranciscoDisplay-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Light.otf"; sourceTree = "<group>"; };
-		8F104D1729C383A700AC95F4 /* SanFranciscoText-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-BoldItalic.otf"; sourceTree = "<group>"; };
-		8F104D1829C383A700AC95F4 /* SanFranciscoText-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-HeavyItalic.otf"; sourceTree = "<group>"; };
-		8F104D1929C383A700AC95F4 /* SanFranciscoText-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-LightItalic.otf"; sourceTree = "<group>"; };
-		8F104D1A29C383A700AC95F4 /* SanFranciscoText-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-SemiBoldItalic.otf"; sourceTree = "<group>"; };
-		8F104D1B29C383A700AC95F4 /* SanFranciscoDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Regular.otf"; sourceTree = "<group>"; };
-		8F104D1C29C383A700AC95F4 /* SanFranciscoDisplay-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Black.otf"; sourceTree = "<group>"; };
-		8F104D1D29C383A700AC95F4 /* SanFranciscoDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Bold.otf"; sourceTree = "<group>"; };
-		8F104D1E29C383A700AC95F4 /* SanFranciscoText-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Heavy.otf"; sourceTree = "<group>"; };
-		8F104D1F29C383A700AC95F4 /* SanFranciscoText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Medium.otf"; sourceTree = "<group>"; };
-		8F104D2029C383A700AC95F4 /* SanFranciscoText-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-MediumItalic.otf"; sourceTree = "<group>"; };
-		8F104D2129C383A700AC95F4 /* SanFranciscoText-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-SemiBold.otf"; sourceTree = "<group>"; };
-		8F104D2229C383A700AC95F4 /* SanFranciscoDisplay-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Thin.otf"; sourceTree = "<group>"; };
-		8F104D2329C383A700AC95F4 /* SanFranciscoText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Light.otf"; sourceTree = "<group>"; };
-		8F104D2429C383A700AC95F4 /* SanFranciscoDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Medium.otf"; sourceTree = "<group>"; };
-		8F104D2529C383A700AC95F4 /* SanFranciscoDisplay-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-SemiBold.otf"; sourceTree = "<group>"; };
 		8F104D2729C383A700AC95F4 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		8F104D2829C383A700AC95F4 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		8F104D2929C383A700AC95F4 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
@@ -190,9 +154,6 @@
 		8F104D3429C383A700AC95F4 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
 		8F104D3529C383A700AC95F4 /* Inter-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Italic.ttf"; sourceTree = "<group>"; };
 		8F104D3629C383A700AC95F4 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
-		8F104D3829C383A700AC95F4 /* NotoSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerif-Regular.ttf"; sourceTree = "<group>"; };
-		8F104D3929C383A700AC95F4 /* NotoSerif-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerif-SemiBold.ttf"; sourceTree = "<group>"; };
-		8F104D3A29C383A700AC95F4 /* NotoSerif-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerif-Bold.ttf"; sourceTree = "<group>"; };
 		8F104D3C29C383A800AC95F4 /* Merriweather-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Bold.ttf"; sourceTree = "<group>"; };
 		8F104D3D29C383A800AC95F4 /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Regular.ttf"; sourceTree = "<group>"; };
 		8F104D3E29C383A800AC95F4 /* Merriweather-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Light.ttf"; sourceTree = "<group>"; };
@@ -201,15 +162,6 @@
 		8F104D4129C383A800AC95F4 /* Merriweather-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Italic.ttf"; sourceTree = "<group>"; };
 		8F104D4229C383A800AC95F4 /* Merriweather-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Black.ttf"; sourceTree = "<group>"; };
 		8F104D4329C383A800AC95F4 /* Merriweather-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-LightItalic.ttf"; sourceTree = "<group>"; };
-		8F104D7429C386E900AC95F4 /* MonAn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonAn.swift; sourceTree = "<group>"; };
-		8F104D7529C386E900AC95F4 /* NhanVien.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NhanVien.swift; sourceTree = "<group>"; };
-		8F104D7629C386E900AC95F4 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
-		8F104D7729C386E900AC95F4 /* BanAn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanAn.swift; sourceTree = "<group>"; };
-		8F104D7829C386E900AC95F4 /* BaoCao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaoCao.swift; sourceTree = "<group>"; };
-		8F104D7929C386E900AC95F4 /* PhieuXuat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhieuXuat.swift; sourceTree = "<group>"; };
-		8F104D7A29C386E900AC95F4 /* HoaDon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoaDon.swift; sourceTree = "<group>"; };
-		8F104D7B29C386E900AC95F4 /* PhieuNhap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhieuNhap.swift; sourceTree = "<group>"; };
-		8F104D7C29C386E900AC95F4 /* TheLoaiMonAn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheLoaiMonAn.swift; sourceTree = "<group>"; };
 		E89FA3BDFFFCFB7812D2DDFF /* Pods_RestaurantManager_DATN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantManager_DATN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F738CFC424894E1B003F8295 /* TableBillDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBillDetailViewController.swift; sourceTree = "<group>"; };
 		F73D0E4B23E2D1D6006D8A30 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
@@ -312,26 +264,42 @@
 			path = CallManagerView;
 			sourceTree = "<group>";
 		};
-		8F104D0129C3742500AC95F4 /* ClassCode */ = {
+		84F706B929C449E0000CA7E2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8F104D0929C379E900AC95F4 /* TableManager */,
+				84F706BA29C449E0000CA7E2 /* MonAn.swift */,
+				84F706BB29C449E0000CA7E2 /* NhanVien.swift */,
+				84F706BC29C449E0000CA7E2 /* Order.swift */,
+				84F706BD29C449E0000CA7E2 /* BanAn.swift */,
+				84F706BE29C449E0000CA7E2 /* BaoCao.swift */,
+				84F706BF29C449E0000CA7E2 /* PhieuXuat.swift */,
+				84F706C029C449E0000CA7E2 /* HoaDon.swift */,
+				84F706C129C449E0000CA7E2 /* PhieuNhap.swift */,
+				84F706C229C449E0000CA7E2 /* TheLoaiMonAn.swift */,
 			);
-			path = ClassCode;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		8F104D0229C3747600AC95F4 /* ViewModel */ = {
+		84F706CC29C464B7000CA7E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84F706CD29C464C3000CA7E2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		8F104D0329C3748100AC95F4 /* Model */ = {
+		8F104D0129C3742500AC95F4 /* ClassCode */ = {
 			isa = PBXGroup;
 			children = (
+				8F104D0929C379E900AC95F4 /* RestaurantManager */,
 			);
-			path = Model;
+			path = ClassCode;
 			sourceTree = "<group>";
 		};
 		8F104D0429C3796600AC95F4 /* ViewController */ = {
@@ -343,14 +311,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		8F104D0929C379E900AC95F4 /* TableManager */ = {
+		8F104D0929C379E900AC95F4 /* RestaurantManager */ = {
 			isa = PBXGroup;
 			children = (
+				84F706CD29C464C3000CA7E2 /* ViewModel */,
+				84F706CC29C464B7000CA7E2 /* Model */,
 				8F104D0429C3796600AC95F4 /* ViewController */,
-				8F104D0329C3748100AC95F4 /* Model */,
-				8F104D0229C3747600AC95F4 /* ViewModel */,
 			);
-			path = TableManager;
+			path = RestaurantManager;
 			sourceTree = "<group>";
 		};
 		8F104D0E29C3837800AC95F4 /* Resources */ = {
@@ -366,39 +334,9 @@
 			children = (
 				8F104D2C29C383A700AC95F4 /* Inter */,
 				8F104D3B29C383A800AC95F4 /* Merriweather */,
-				8F104D3729C383A700AC95F4 /* Noto_Serif */,
-				8F104D1029C383A700AC95F4 /* SanFranciscoFont-master */,
 				8F104D2629C383A700AC95F4 /* SF-Pro-Display */,
 			);
 			path = Font;
-			sourceTree = "<group>";
-		};
-		8F104D1029C383A700AC95F4 /* SanFranciscoFont-master */ = {
-			isa = PBXGroup;
-			children = (
-				8F104D1129C383A700AC95F4 /* SanFranciscoDisplay-Heavy.otf */,
-				8F104D1229C383A700AC95F4 /* SanFranciscoText-RegularItalic.otf */,
-				8F104D1329C383A700AC95F4 /* SanFranciscoText-Regular.otf */,
-				8F104D1429C383A700AC95F4 /* SanFranciscoDisplay-Ultralight.otf */,
-				8F104D1529C383A700AC95F4 /* SanFranciscoText-Bold.otf */,
-				8F104D1629C383A700AC95F4 /* SanFranciscoDisplay-Light.otf */,
-				8F104D1729C383A700AC95F4 /* SanFranciscoText-BoldItalic.otf */,
-				8F104D1829C383A700AC95F4 /* SanFranciscoText-HeavyItalic.otf */,
-				8F104D1929C383A700AC95F4 /* SanFranciscoText-LightItalic.otf */,
-				8F104D1A29C383A700AC95F4 /* SanFranciscoText-SemiBoldItalic.otf */,
-				8F104D1B29C383A700AC95F4 /* SanFranciscoDisplay-Regular.otf */,
-				8F104D1C29C383A700AC95F4 /* SanFranciscoDisplay-Black.otf */,
-				8F104D1D29C383A700AC95F4 /* SanFranciscoDisplay-Bold.otf */,
-				8F104D1E29C383A700AC95F4 /* SanFranciscoText-Heavy.otf */,
-				8F104D1F29C383A700AC95F4 /* SanFranciscoText-Medium.otf */,
-				8F104D2029C383A700AC95F4 /* SanFranciscoText-MediumItalic.otf */,
-				8F104D2129C383A700AC95F4 /* SanFranciscoText-SemiBold.otf */,
-				8F104D2229C383A700AC95F4 /* SanFranciscoDisplay-Thin.otf */,
-				8F104D2329C383A700AC95F4 /* SanFranciscoText-Light.otf */,
-				8F104D2429C383A700AC95F4 /* SanFranciscoDisplay-Medium.otf */,
-				8F104D2529C383A700AC95F4 /* SanFranciscoDisplay-SemiBold.otf */,
-			);
-			path = "SanFranciscoFont-master";
 			sourceTree = "<group>";
 		};
 		8F104D2629C383A700AC95F4 /* SF-Pro-Display */ = {
@@ -430,16 +368,6 @@
 			path = Inter;
 			sourceTree = "<group>";
 		};
-		8F104D3729C383A700AC95F4 /* Noto_Serif */ = {
-			isa = PBXGroup;
-			children = (
-				8F104D3829C383A700AC95F4 /* NotoSerif-Regular.ttf */,
-				8F104D3929C383A700AC95F4 /* NotoSerif-SemiBold.ttf */,
-				8F104D3A29C383A700AC95F4 /* NotoSerif-Bold.ttf */,
-			);
-			path = Noto_Serif;
-			sourceTree = "<group>";
-		};
 		8F104D3B29C383A800AC95F4 /* Merriweather */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,23 +381,6 @@
 				8F104D4329C383A800AC95F4 /* Merriweather-LightItalic.ttf */,
 			);
 			path = Merriweather;
-			sourceTree = "<group>";
-		};
-		8F104D7329C386E900AC95F4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				8F104D7429C386E900AC95F4 /* MonAn.swift */,
-				8F104D7529C386E900AC95F4 /* NhanVien.swift */,
-				8F104D7629C386E900AC95F4 /* Order.swift */,
-				8F104D7729C386E900AC95F4 /* BanAn.swift */,
-				8F104D7829C386E900AC95F4 /* BaoCao.swift */,
-				8F104D7929C386E900AC95F4 /* PhieuXuat.swift */,
-				8F104D7A29C386E900AC95F4 /* HoaDon.swift */,
-				8F104D7B29C386E900AC95F4 /* PhieuNhap.swift */,
-				8F104D7C29C386E900AC95F4 /* TheLoaiMonAn.swift */,
-			);
-			name = Model;
-			path = "../../../../Downloads/RestaurantManager-master/RestaurantManager_DATN/RestaurantManager_DATN/Model";
 			sourceTree = "<group>";
 		};
 		CCD323CA21DF563C5D8089A4 /* Frameworks */ = {
@@ -523,8 +434,8 @@
 				8F104D0129C3742500AC95F4 /* ClassCode */,
 				F7AD51D723E41685008DFF3A /* App */,
 				F7AD51D923E4169C008DFF3A /* Helpers */,
-				8F104D7329C386E900AC95F4 /* Model */,
 				F7AD51D823E41692008DFF3A /* Controllers */,
+				84F706B929C449E0000CA7E2 /* Model */,
 				F7409C6123E187100037652A /* Main.storyboard */,
 				F7409C6623E187120037652A /* LaunchScreen.storyboard */,
 				F7409C6F23E196070037652A /* Assets.xcassets */,
@@ -829,68 +740,44 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F104D4F29C383A800AC95F4 /* SanFranciscoDisplay-Black.otf in Resources */,
 				8F104D5C29C383A800AC95F4 /* SF-Pro-Display-SemiBold.otf in Resources */,
 				8F104D6E29C383A800AC95F4 /* Merriweather-BoldItalic.ttf in Resources */,
-				8F104D5229C383A800AC95F4 /* SanFranciscoText-Medium.otf in Resources */,
 				8F104D7029C383A800AC95F4 /* Merriweather-Italic.ttf in Resources */,
 				8F104D7229C383A800AC95F4 /* Merriweather-LightItalic.ttf in Resources */,
 				F73F010E23EDA044000CF829 /* KitchenOrderTableViewCell.xib in Resources */,
-				8F104D4929C383A800AC95F4 /* SanFranciscoDisplay-Light.otf in Resources */,
-				8F104D4B29C383A800AC95F4 /* SanFranciscoText-HeavyItalic.otf in Resources */,
 				8F104D6C29C383A800AC95F4 /* Merriweather-Regular.ttf in Resources */,
-				8F104D4A29C383A800AC95F4 /* SanFranciscoText-BoldItalic.otf in Resources */,
 				8F104D5B29C383A800AC95F4 /* SF-Pro-Display-Medium.otf in Resources */,
 				8F104D7129C383A800AC95F4 /* Merriweather-Black.ttf in Resources */,
 				8F104D5E29C383A800AC95F4 /* Inter-Medium.ttf in Resources */,
-				8F104D4529C383A800AC95F4 /* SanFranciscoText-RegularItalic.otf in Resources */,
 				8F104D6629C383A800AC95F4 /* Inter-Italic.ttf in Resources */,
-				8F104D4729C383A800AC95F4 /* SanFranciscoDisplay-Ultralight.otf in Resources */,
 				F741307823EFEE9B00032E13 /* DishHeaderTableViewCell.xib in Resources */,
-				8F104D5329C383A800AC95F4 /* SanFranciscoText-MediumItalic.otf in Resources */,
 				8F104D6B29C383A800AC95F4 /* Merriweather-Bold.ttf in Resources */,
 				F7409C6823E187120037652A /* LaunchScreen.storyboard in Resources */,
 				8F104D0D29C37A5400AC95F4 /* RestaurantManagerViewController.xib in Resources */,
-				8F104D6A29C383A800AC95F4 /* NotoSerif-Bold.ttf in Resources */,
 				8F104D6329C383A800AC95F4 /* Inter-ExtraBold.ttf in Resources */,
 				F78CCE89248B9B6100DF973B /* OrderManagerViewCell.xib in Resources */,
 				F73E2DFD23EAC7B500D7E02B /* TableCollectionViewCell.xib in Resources */,
 				F741308023EFFC4900032E13 /* StorageItemsTableViewCell.xib in Resources */,
 				8F104D6529C383A800AC95F4 /* Inter-Black.ttf in Resources */,
-				8F104D5529C383A800AC95F4 /* SanFranciscoDisplay-Thin.otf in Resources */,
 				5625F16524CECF2800AAA65E /* CallManagerView.xib in Resources */,
-				8F104D6929C383A800AC95F4 /* NotoSerif-SemiBold.ttf in Resources */,
 				F741307323EFDEC300032E13 /* BillTableViewCell.xib in Resources */,
 				8F104D5929C383A800AC95F4 /* SF-Pro-Display-Regular.otf in Resources */,
-				8F104D5829C383A800AC95F4 /* SanFranciscoDisplay-SemiBold.otf in Resources */,
 				8F104D5D29C383A800AC95F4 /* SF-Pro-Text-Regular.otf in Resources */,
 				8F104D5F29C383A800AC95F4 /* Inter-Light.ttf in Resources */,
-				8F104D4829C383A800AC95F4 /* SanFranciscoText-Bold.otf in Resources */,
 				5625F16D24CEDCF400AAA65E /* ManagerCallTableViewCell.xib in Resources */,
 				8F104D6729C383A800AC95F4 /* Inter-SemiBold.ttf in Resources */,
 				8F104D6229C383A800AC95F4 /* Inter-Regular.ttf in Resources */,
 				8F104D6029C383A800AC95F4 /* Inter-Thin.ttf in Resources */,
-				8F104D4629C383A800AC95F4 /* SanFranciscoText-Regular.otf in Resources */,
-				8F104D5729C383A800AC95F4 /* SanFranciscoDisplay-Medium.otf in Resources */,
-				8F104D5029C383A800AC95F4 /* SanFranciscoDisplay-Bold.otf in Resources */,
 				F7BD2D7624869A3400FC4F28 /* CartViewController.xib in Resources */,
-				8F104D5629C383A800AC95F4 /* SanFranciscoText-Light.otf in Resources */,
-				8F104D5429C383A800AC95F4 /* SanFranciscoText-SemiBold.otf in Resources */,
 				F7409C7023E196070037652A /* Assets.xcassets in Resources */,
-				8F104D6829C383A800AC95F4 /* NotoSerif-Regular.ttf in Resources */,
 				8F104D6429C383A800AC95F4 /* Inter-ExtraLight.ttf in Resources */,
-				8F104D4C29C383A800AC95F4 /* SanFranciscoText-LightItalic.otf in Resources */,
 				F747BDEB24839B050029B7CC /* ManagerDataTableViewCell.xib in Resources */,
 				8441DB05299B2D5100165FBB /* GoogleService-Info.plist in Resources */,
-				8F104D4429C383A800AC95F4 /* SanFranciscoDisplay-Heavy.otf in Resources */,
-				8F104D4D29C383A800AC95F4 /* SanFranciscoText-SemiBoldItalic.otf in Resources */,
-				8F104D5129C383A800AC95F4 /* SanFranciscoText-Heavy.otf in Resources */,
 				8F104D5A29C383A800AC95F4 /* SF-Pro-Display-Bold.otf in Resources */,
 				8F104D6129C383A800AC95F4 /* Inter-Bold.ttf in Resources */,
 				8F104D6F29C383A800AC95F4 /* Merriweather-BlackItalic.ttf in Resources */,
 				8F104D6D29C383A800AC95F4 /* Merriweather-Light.ttf in Resources */,
 				F75287B023EEAA60007A9621 /* DishTableViewCell.xib in Resources */,
-				8F104D4E29C383A800AC95F4 /* SanFranciscoDisplay-Regular.otf in Resources */,
 				F750F61724912128008C5604 /* MenuDishTableViewCell.xib in Resources */,
 				F7BD2D7424869A3400FC4F28 /* CartViewCell.xib in Resources */,
 				F7409C6323E187100037652A /* Main.storyboard in Resources */,
@@ -950,8 +837,8 @@
 				8F104D0C29C37A5400AC95F4 /* RestaurantManagerViewController.swift in Sources */,
 				5628023524C15019007F5431 /* CreateReportManagerViewController.swift in Sources */,
 				F750F611249120F5008C5604 /* MenuViewController.swift in Sources */,
-				8F104D8329C386E900AC95F4 /* HoaDon.swift in Sources */,
-				8F104D8429C386E900AC95F4 /* PhieuNhap.swift in Sources */,
+				84F706C929C449E0000CA7E2 /* HoaDon.swift in Sources */,
+				84F706CA29C449E0000CA7E2 /* PhieuNhap.swift in Sources */,
 				F73F011123EDA5AF000CF829 /* RestaurantViewController.swift in Sources */,
 				F73E2DFE23EAC7B500D7E02B /* TableCollectionViewCell.swift in Sources */,
 				F741307923EFEE9B00032E13 /* DishHeaderTableViewCell.swift in Sources */,
@@ -963,12 +850,12 @@
 				5625F16324CECF1C00AAA65E /* CallManagerView.swift in Sources */,
 				8F104D0029C0D98100AC95F4 /* File.swift in Sources */,
 				F747F9B1249BBA8400B82307 /* UITextfield+.swift in Sources */,
-				8F104D8229C386E900AC95F4 /* PhieuXuat.swift in Sources */,
-				8F104D8529C386E900AC95F4 /* TheLoaiMonAn.swift in Sources */,
+				84F706C829C449E0000CA7E2 /* PhieuXuat.swift in Sources */,
+				84F706CB29C449E0000CA7E2 /* TheLoaiMonAn.swift in Sources */,
 				5628024324C1BCB9007F5431 /* ReportDetailsManagerViewController.swift in Sources */,
-				8F104D8129C386E900AC95F4 /* BaoCao.swift in Sources */,
+				84F706C729C449E0000CA7E2 /* BaoCao.swift in Sources */,
 				F776C49623E5A3E7005901CC /* FeatureMenuViewController.swift in Sources */,
-				8F104D7D29C386E900AC95F4 /* MonAn.swift in Sources */,
+				84F706C329C449E0000CA7E2 /* MonAn.swift in Sources */,
 				5625F16C24CEDCF400AAA65E /* ManagerCallTableViewCell.swift in Sources */,
 				F75287AF23EEAA60007A9621 /* DishTableViewCell.swift in Sources */,
 				F78CCE8A248B9B6100DF973B /* OrderManagerViewCell.swift in Sources */,
@@ -985,7 +872,7 @@
 				F741307F23EFFC4900032E13 /* StorageItemsTableViewCell.swift in Sources */,
 				F749AD2924A85DE2006C2318 /* AddStaffManagerViewController.swift in Sources */,
 				F7A682E424711752006D8058 /* Date+.swift in Sources */,
-				8F104D7F29C386E900AC95F4 /* Order.swift in Sources */,
+				84F706C529C449E0000CA7E2 /* Order.swift in Sources */,
 				F75287A723EEA649007A9621 /* MakeOrderViewController.swift in Sources */,
 				F7EC5E2F248C9E9D00ABE621 /* TableManagerViewController.swift in Sources */,
 				F797881C24BB4C1E006FE58A /* ImportBillManagerViewController.swift in Sources */,
@@ -993,7 +880,7 @@
 				F73D0E4C23E2D1D6006D8A30 /* UIViewController+.swift in Sources */,
 				F750F61624912128008C5604 /* MenuDishTableViewCell.swift in Sources */,
 				F7AD51DD23E427F0008DFF3A /* MainNavigationViewController.swift in Sources */,
-				8F104D8029C386E900AC95F4 /* BanAn.swift in Sources */,
+				84F706C629C449E0000CA7E2 /* BanAn.swift in Sources */,
 				F747337A24712CAD00D0E3FC /* Double+.swift in Sources */,
 				F75287A423EEA0E7007A9621 /* BillHistoryViewController.swift in Sources */,
 				8441DB06299B442F00165FBB /* LoginViewController.swift in Sources */,
@@ -1005,7 +892,7 @@
 				F741307223EFDEC300032E13 /* BillTableViewCell.swift in Sources */,
 				F738CFC524894E1B003F8295 /* TableBillDetailViewController.swift in Sources */,
 				F7409C5E23E187100037652A /* SceneDelegate.swift in Sources */,
-				8F104D7E29C386E900AC95F4 /* NhanVien.swift in Sources */,
+				84F706C429C449E0000CA7E2 /* NhanVien.swift in Sources */,
 				F747BDEF2483D0730029B7CC /* DishManagerViewController.swift in Sources */,
 				5629C4A224C29E5000006F4D /* Cell.swift in Sources */,
 			);

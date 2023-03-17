@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,6 +16,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RestaurantManagerViewController" customModule="RestaurantManager_DATN" customModuleProvider="target">
             <connections>
+                <outlet property="btnHistory" destination="2qW-IV-v8E" id="bay-uH-P3G"/>
+                <outlet property="collectionView" destination="kTT-oQ-eRx" id="eE7-Uu-BbQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,13 +27,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7l-fI-S6j">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgp-IC-R6l">
-                            <rect key="frame" x="0.0" y="48" width="414" height="50"/>
+                            <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhà hàng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xg9-69-J4F">
-                                    <rect key="frame" x="164.5" y="13" width="85" height="24"/>
+                                    <rect key="frame" x="164" y="13" width="86.5" height="24"/>
                                     <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="20"/>
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -53,6 +55,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3f3-6b-skO">
                                     <rect key="frame" x="349.5" y="10" width="54.5" height="30"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <connections>
+                                        <action selector="didTapHistory:" destination="-1" eventType="touchUpInside" id="IzZ-5F-nNp"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -81,12 +86,26 @@
                         <constraint firstAttribute="bottom" secondItem="hgp-IC-R6l" secondAttribute="bottom" id="Xd7-8l-FMj"/>
                     </constraints>
                 </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kTT-oQ-eRx">
+                    <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="d6K-2p-zbl">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="t7l-fI-S6j" secondAttribute="trailing" id="04b-D0-Fec"/>
+                <constraint firstItem="kTT-oQ-eRx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4gF-G5-d6G"/>
+                <constraint firstItem="kTT-oQ-eRx" firstAttribute="top" secondItem="t7l-fI-S6j" secondAttribute="bottom" id="CPT-7J-Idy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kTT-oQ-eRx" secondAttribute="bottom" id="FbX-gt-QZP"/>
                 <constraint firstItem="hgp-IC-R6l" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="HTv-8s-4ty"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kTT-oQ-eRx" secondAttribute="trailing" id="Nlx-91-Uil"/>
                 <constraint firstItem="t7l-fI-S6j" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Qmf-3Q-gMm"/>
                 <constraint firstItem="t7l-fI-S6j" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZGW-gW-o3h"/>
             </constraints>
