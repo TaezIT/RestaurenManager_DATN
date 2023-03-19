@@ -55,6 +55,10 @@
 		8F104D7129C383A800AC95F4 /* Merriweather-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D4229C383A800AC95F4 /* Merriweather-Black.ttf */; };
 		8F104D7229C383A800AC95F4 /* Merriweather-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F104D4329C383A800AC95F4 /* Merriweather-LightItalic.ttf */; };
 		8F104D8929C4C52700AC95F4 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104D8829C4C52700AC95F4 /* Enum.swift */; };
+		8F104D8D29C7126D00AC95F4 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104D8C29C7126D00AC95F4 /* FoodModel.swift */; };
+		8F104D8F29C713B200AC95F4 /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104D8E29C713B200AC95F4 /* Table.swift */; };
+		8F104D9129C713CA00AC95F4 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104D9029C713CA00AC95F4 /* Bill.swift */; };
+		8F104D9829C72A4800AC95F4 /* RestaurentManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F104D9729C72A4800AC95F4 /* RestaurentManagerViewModel.swift */; };
 		F738CFC524894E1B003F8295 /* TableBillDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738CFC424894E1B003F8295 /* TableBillDetailViewController.swift */; };
 		F73D0E4C23E2D1D6006D8A30 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D0E4B23E2D1D6006D8A30 /* UIViewController+.swift */; };
 		F73D0E5023E2E51A006D8A30 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D0E4F23E2E51A006D8A30 /* App.swift */; };
@@ -162,6 +166,10 @@
 		8F104D4229C383A800AC95F4 /* Merriweather-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Black.ttf"; sourceTree = "<group>"; };
 		8F104D4329C383A800AC95F4 /* Merriweather-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-LightItalic.ttf"; sourceTree = "<group>"; };
 		8F104D8829C4C52700AC95F4 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		8F104D8C29C7126D00AC95F4 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		8F104D8E29C713B200AC95F4 /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
+		8F104D9029C713CA00AC95F4 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		8F104D9729C72A4800AC95F4 /* RestaurentManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurentManagerViewModel.swift; sourceTree = "<group>"; };
 		E89FA3BDFFFCFB7812D2DDFF /* Pods_RestaurantManager_DATN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantManager_DATN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F738CFC424894E1B003F8295 /* TableBillDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBillDetailViewController.swift; sourceTree = "<group>"; };
 		F73D0E4B23E2D1D6006D8A30 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
@@ -385,6 +393,9 @@
 		8F104D8A29C4C78000AC95F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8F104D8C29C7126D00AC95F4 /* FoodModel.swift */,
+				8F104D8E29C713B200AC95F4 /* Table.swift */,
+				8F104D9029C713CA00AC95F4 /* Bill.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -392,8 +403,16 @@
 		8F104D8B29C4C78800AC95F4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8F104D9729C72A4800AC95F4 /* RestaurentManagerViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8F104D9429C728BD00AC95F4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		CCD323CA21DF563C5D8089A4 /* Frameworks */ = {
@@ -443,6 +462,7 @@
 		F7409C5A23E187100037652A /* RestaurantManager_DATN */ = {
 			isa = PBXGroup;
 			children = (
+				8F104D9429C728BD00AC95F4 /* Base */,
 				F7AD51D723E41685008DFF3A /* App */,
 				8F104D0129C3742500AC95F4 /* ClassCode */,
 				8F104D0E29C3837800AC95F4 /* Resources */,
@@ -718,7 +738,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = "Hoang Dinh Huy";
+				ORGANIZATIONNAME = "Pham Tuan Anh";
 				TargetAttributes = {
 					F7409C5723E187100037652A = {
 						CreatedOnToolsVersion = 11.3;
@@ -855,6 +875,8 @@
 				F747BDDE2483617C0029B7CC /* ManagerDataViewController.swift in Sources */,
 				562442C824CAD87C00754A76 /* Float+.swift in Sources */,
 				F7409C5C23E187100037652A /* AppDelegate.swift in Sources */,
+				8F104D8F29C713B200AC95F4 /* Table.swift in Sources */,
+				8F104D8D29C7126D00AC95F4 /* FoodModel.swift in Sources */,
 				5625F16324CECF1C00AAA65E /* CallManagerView.swift in Sources */,
 				F747F9B1249BBA8400B82307 /* UITextfield+.swift in Sources */,
 				84F706C829C449E0000CA7E2 /* PhieuXuat.swift in Sources */,
@@ -883,6 +905,7 @@
 				84F706C529C449E0000CA7E2 /* Order.swift in Sources */,
 				F75287A723EEA649007A9621 /* MakeOrderViewController.swift in Sources */,
 				F7EC5E2F248C9E9D00ABE621 /* TableManagerViewController.swift in Sources */,
+				8F104D9829C72A4800AC95F4 /* RestaurentManagerViewModel.swift in Sources */,
 				F797881C24BB4C1E006FE58A /* ImportBillManagerViewController.swift in Sources */,
 				F74A0CD124B4C79A0071BA27 /* SearchBillMangerViewController.swift in Sources */,
 				F73D0E4C23E2D1D6006D8A30 /* UIViewController+.swift in Sources */,
@@ -890,6 +913,7 @@
 				F7AD51DD23E427F0008DFF3A /* MainNavigationViewController.swift in Sources */,
 				84F706C629C449E0000CA7E2 /* BanAn.swift in Sources */,
 				F747337A24712CAD00D0E3FC /* Double+.swift in Sources */,
+				8F104D9129C713CA00AC95F4 /* Bill.swift in Sources */,
 				F75287A423EEA0E7007A9621 /* BillHistoryViewController.swift in Sources */,
 				8441DB06299B442F00165FBB /* LoginViewController.swift in Sources */,
 				F75287B223EEBFFA007A9621 /* MainTabBarViewController.swift in Sources */,
