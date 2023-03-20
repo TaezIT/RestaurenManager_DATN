@@ -23,7 +23,6 @@ class RestaurantViewController: UIViewController {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.placeholder = "Tìm Bàn..."
         searchController.hidesNavigationBarDuringPresentation = true
-//        searchController.searchResultsUpdater = self
         return searchController
     } ()
     

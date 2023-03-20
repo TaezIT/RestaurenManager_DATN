@@ -9,13 +9,13 @@
 import Foundation
 import ObjectMapper
 
-struct FoodModel: Decodable {
+struct FoodModel: Decodable, Mappable {
     var foodId: String! = UUID().uuidString
     var foodName: String = ""
     var unit: String = ""
     var unitPrice: Double = 0
     var detail: String = ""
-    var place: String = ""
+    var placeImage: String = ""
     var idKindOfFood: String = ""
     var inBill: Int = -1
     var didDelete: Int = 0
@@ -29,7 +29,7 @@ struct FoodModel: Decodable {
         unit <- map["donvimonan"]
         unitPrice <- map["dongia"]
         detail <- map["motachitiet"]
-        place <- map["diachianh"]
+        placeImage <- map["diachianh"]
         idKindOfFood <- map["idtheloaimonan"]
         inBill <- map["trongthucdon"]
         didDelete <- map["daxoa"]

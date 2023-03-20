@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,7 +20,7 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Gp-SZ-Ldl">
                         <rect key="frame" x="0.0" y="278" width="256" height="3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="3" id="nZi-Dg-BWR"/>
                         </constraints>
@@ -30,7 +31,7 @@
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="used" translatesAutoresizingMaskIntoConstraints="NO" id="5oc-1w-D9l">
                         <rect key="frame" x="77" y="77" width="102" height="102"/>
-                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="tintColor" systemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="5oc-1w-D9l" secondAttribute="height" id="DEW-Bc-oxg"/>
                         </constraints>
@@ -52,6 +53,7 @@
                     </label>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="9Lf-7Q-nGk" secondAttribute="trailing" id="4aX-sp-khq"/>
                 <constraint firstItem="OjB-YT-2rb" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="967-ci-K8r"/>
@@ -68,7 +70,6 @@
                 <constraint firstItem="8Gp-SZ-Ldl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="y3Y-Tn-CSx"/>
                 <constraint firstAttribute="bottom" secondItem="8Gp-SZ-Ldl" secondAttribute="bottom" id="yt7-5V-413"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="256" height="281"/>
             <connections>
                 <outlet property="imvState" destination="5oc-1w-D9l" id="tqK-jU-fbv"/>
@@ -83,5 +84,11 @@
     <resources>
         <image name="table-4" width="138" height="138"/>
         <image name="used" width="512" height="512"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

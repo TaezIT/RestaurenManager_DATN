@@ -3,7 +3,7 @@
 //  Firebase_demo
 //
 //  Created by Pham Tuan Anh on 18/02/2023.
-//  Copyright © 2019 Pham Tuan Anh. All rights reserved.
+//  Copyright © 2023 Pham Tuan Anh. All rights reserved.
 //
 
 import UIKit
@@ -20,6 +20,35 @@ final class TableCollectionViewCell: UICollectionViewCell {
     
     func configView(data: BanAn) {
         if let size = data.soluongghe, let number = data.sobanan {
+            numberLabel.text = number
+            sizeLabel.text = "\(size)"
+            
+            if size <= 4 {
+                imvTable.image = UIImage(named: "table-4")
+            } else if size <= 6 {
+                imvTable.image = UIImage(named: "table-6")
+            } else {
+                imvTable.image = UIImage(named: "table-10")
+            }
+        }
+        switch state {
+        case .empty:
+            imvState.image = nil
+            vState.backgroundColor = .systemGreen
+        case .waiting:
+            imvState.image = UIImage(named: "wait")
+            imvState.tintColor = .systemRed
+            vState.backgroundColor = .systemRed
+        case .inUsed:
+            imvState.image = UIImage(named: "used")
+            imvState.tintColor = .systemYellow
+            vState.backgroundColor = .systemYellow
+        }
+        
+    }
+    
+    func configViews(data: TableModel) {
+        if let size = data.numberOfChair, let number = data.numberOrdinalTable {
             numberLabel.text = number
             sizeLabel.text = "\(size)"
             

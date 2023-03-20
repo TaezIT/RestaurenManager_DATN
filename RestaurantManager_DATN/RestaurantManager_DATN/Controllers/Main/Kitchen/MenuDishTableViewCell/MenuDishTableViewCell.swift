@@ -3,7 +3,7 @@
 //  Firebase_demo
 //
 //  Created by Pham Tuan Anh on 23/02/2023.
-//  Copyright © 2019 Pham Tuan Anh. All rights reserved.
+//  Copyright © 2023 Pham Tuan Anh. All rights reserved.
 //
 
 final class MenuDishTableViewCell: UITableViewCell {
