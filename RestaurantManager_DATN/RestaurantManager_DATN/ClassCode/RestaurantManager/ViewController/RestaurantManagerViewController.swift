@@ -29,7 +29,6 @@ class RestaurantManagerViewController: UIViewController {
     //MARK: -Life cycles
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     //MARK: -Action
@@ -61,6 +60,11 @@ class RestaurantManagerViewController: UIViewController {
         }
     }
     
+    @objc func handleRefreshScroll(){
+        self.collectionView.scrollRectToVisible(CGRect(x: 0, y: 0, width: 1, height: 1), animated: true)
+        self.collectionView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+    }
+
     //MARK: -Other func
     func setupData() {
         tableRefreshControl.endRefreshing()
