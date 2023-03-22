@@ -30,6 +30,15 @@ extension UIStoryboard {
         return vc
     }
     
+    var MainTabbar: MainTabbarController {
+        guard let vc = UIStoryboard.main.instantiateViewController(withIdentifier: "MainTabbarController") as? MainTabbarController else {
+            fatalError("MainTabbarController couldn't be found in Storyboard file")
+        }
+        return vc
+    }
+    
+    
+    
     var LogoViewController: UIViewController {
         let vc = UIStoryboard.main.instantiateViewController(withIdentifier: "LogoViewController")
         return vc

@@ -75,4 +75,10 @@ final class App: UINavigationController {
                 self.window.rootViewController = rootViewController
             }, completion: nil)
         }
+    func changeViewController(_ rootViewController: UIViewController) {
+           UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: {
+               self.window.rootViewController = rootViewController
+           }, completion: nil)
+       }
+        
 }
