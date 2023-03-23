@@ -20,6 +20,7 @@ class RestaurantManagerViewController: UIViewController {
     var currentBillData: [BillModel] = []
     var isNotAuthored: Bool = true
     let restaurentManagerViewModel = RestaurentManagerViewModel()
+    
     private lazy var tableRefreshControl: UIRefreshControl = {
         let refresh = UIRefreshControl()
         refresh.addTarget(self, action: #selector(fetchData), for: .valueChanged)
@@ -29,6 +30,11 @@ class RestaurantManagerViewController: UIViewController {
     //MARK: -Life cycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setUpViews()
+        self.fetchData()
+        Timer.scheduledTimer(withTimeInterval: 30, repeats: true) {_ in
+            self.fetchData()
+        }
     }
 
     //MARK: -Action
@@ -47,14 +53,14 @@ class RestaurantManagerViewController: UIViewController {
         var isTableLoaded = false
         var isBillLoaded = false
         
-        RestaurentManagerViewModel.fetchAllDataAvailable { [weak self] (data, error) in
+        restaurentManagerViewModel.fetchAllDataAvailable { [weak self] (data, error) in
             if error != nil {
                 print(error.debugDescription)
             } else if let data = data {
                 self?.tableData = data
             }
             isTableLoaded = true
-            if isBillLoaded {
+            if !isBillLoaded {
                 self?.setupData()
             }
         }

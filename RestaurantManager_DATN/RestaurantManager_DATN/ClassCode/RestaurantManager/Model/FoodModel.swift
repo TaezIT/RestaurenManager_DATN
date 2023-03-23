@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-struct FoodModel: Decodable, Mappable {
+struct FoodModel: Decodable, Mappable, Hashable{
     var foodId: String! = UUID().uuidString
     var foodName: String = ""
     var unit: String = ""

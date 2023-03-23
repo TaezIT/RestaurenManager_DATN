@@ -50,8 +50,8 @@ final class App: UINavigationController {
                         self?.transitionToLoginView()
                     }
                     self?.staffInfo = data
-                    let vc = UIStoryboard.main.MainNavigationViewController
-                    self?.changeView(vc)
+                    let vc = MainTabbarController()
+                    self?.changeViewController(vc)
                 } else if error == nil {
                     fromVC?.showAlert(title: "Thông báo", message: "Tài khoản của bạn đã bị xoá hoặc không tồn tai trong hệ thống.")
                     do {
@@ -75,7 +75,7 @@ final class App: UINavigationController {
                 self.window.rootViewController = rootViewController
             }, completion: nil)
         }
-    func changeViewController(_ rootViewController: UIViewController) {
+    func changeViewController(_ rootViewController: UITabBarController) {
            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: {
                self.window.rootViewController = rootViewController
            }, completion: nil)

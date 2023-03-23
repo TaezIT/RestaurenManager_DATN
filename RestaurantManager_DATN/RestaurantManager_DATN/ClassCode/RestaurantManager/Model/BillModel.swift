@@ -16,8 +16,8 @@ struct BillModel: Decodable, Mappable {
     var staffid: String? = ""
     var timeCreate: Date = Date()
     var didDelete: Int? = 0
-    var orderList: [Order]?
-    var staff: NhanVien?
+    var orderList: [Orders]?
+    var staff: Staff?
     
     init?(map: Map) {
     }
@@ -25,7 +25,7 @@ struct BillModel: Decodable, Mappable {
     func isBillServed() -> Bool? {
         if let orderList = orderList {
             for order in orderList {
-                if order.trangthai < 0 || order.trangthai < 3 {
+                if order.status < 0 || order.status < 3 {
                     return false
                 }
             }

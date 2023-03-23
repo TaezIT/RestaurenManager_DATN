@@ -21,6 +21,10 @@ class MainTabbarController: UITabBarController {
         self.setShadow()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     func initTabbar() {
         self.delegate = self
         let restaurantManager =  RestaurantManagerViewController()

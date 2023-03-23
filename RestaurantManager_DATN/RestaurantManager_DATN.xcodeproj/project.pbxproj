@@ -20,6 +20,8 @@
 		5629C4A224C29E5000006F4D /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5629C4A124C29E5000006F4D /* Cell.swift */; };
 		8441DB05299B2D5100165FBB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8441DB04299B2D5100165FBB /* GoogleService-Info.plist */; };
 		8441DB06299B442F00165FBB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7409C5F23E187100037652A /* LoginViewController.swift */; };
+		84F0C1CF29CC448600B7E485 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0C1CE29CC448600B7E485 /* Orders.swift */; };
+		84F0C1D129CC46F500B7E485 /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0C1D029CC46F500B7E485 /* Staff.swift */; };
 		84F706C329C449E0000CA7E2 /* MonAn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F706BA29C449E0000CA7E2 /* MonAn.swift */; };
 		84F706C429C449E0000CA7E2 /* NhanVien.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F706BB29C449E0000CA7E2 /* NhanVien.swift */; };
 		84F706C529C449E0000CA7E2 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F706BC29C449E0000CA7E2 /* Order.swift */; };
@@ -137,6 +139,8 @@
 		5629C4A124C29E5000006F4D /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		7E3E9228B1AABE7F753B9E11 /* Pods-RestaurantManager_DATN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantManager_DATN.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantManager_DATN/Pods-RestaurantManager_DATN.debug.xcconfig"; sourceTree = "<group>"; };
 		8441DB04299B2D5100165FBB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84F0C1CE29CC448600B7E485 /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
+		84F0C1D029CC46F500B7E485 /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
 		84F706BA29C449E0000CA7E2 /* MonAn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonAn.swift; sourceTree = "<group>"; };
 		84F706BB29C449E0000CA7E2 /* NhanVien.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NhanVien.swift; sourceTree = "<group>"; };
 		84F706BC29C449E0000CA7E2 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
@@ -421,6 +425,8 @@
 				8F104D8C29C7126D00AC95F4 /* FoodModel.swift */,
 				8F104D8E29C713B200AC95F4 /* TableModel.swift */,
 				8F104D9029C713CA00AC95F4 /* BillModel.swift */,
+				84F0C1CE29CC448600B7E485 /* Orders.swift */,
+				84F0C1D029CC46F500B7E485 /* Staff.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -899,6 +905,7 @@
 				8F104D0C29C37A5400AC95F4 /* RestaurantManagerViewController.swift in Sources */,
 				5628023524C15019007F5431 /* CreateReportManagerViewController.swift in Sources */,
 				F750F611249120F5008C5604 /* MenuViewController.swift in Sources */,
+				84F0C1D129CC46F500B7E485 /* Staff.swift in Sources */,
 				84F706C929C449E0000CA7E2 /* HoaDon.swift in Sources */,
 				8F104D9F29C89F0200AC95F4 /* UIView-Ex.swift in Sources */,
 				84F706CA29C449E0000CA7E2 /* PhieuNhap.swift in Sources */,
@@ -965,6 +972,7 @@
 				F738CFC524894E1B003F8295 /* TableBillDetailViewController.swift in Sources */,
 				F7409C5E23E187100037652A /* SceneDelegate.swift in Sources */,
 				84F706C429C449E0000CA7E2 /* NhanVien.swift in Sources */,
+				84F0C1CF29CC448600B7E485 /* Orders.swift in Sources */,
 				F747BDEF2483D0730029B7CC /* DishManagerViewController.swift in Sources */,
 				5629C4A224C29E5000006F4D /* Cell.swift in Sources */,
 			);
