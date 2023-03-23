@@ -124,6 +124,15 @@ extension RestaurantManagerViewController: UICollectionViewDataSource, UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueCell(TableCollectionViewCell.self, forIndexPath: indexPath)
+        if let bill = currentTableData[indexPath.item].bill, let served = bill.isBillServed(){
+            if served {
+                cell.state = .inUsed
+            } else {
+                cell.state = .waiting
+            }
+        } else {
+            cell.state = .empty
+        }
         cell.configViews(data: currentTableData[indexPath.item])
         return cell
     }

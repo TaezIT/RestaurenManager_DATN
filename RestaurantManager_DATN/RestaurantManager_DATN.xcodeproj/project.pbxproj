@@ -315,6 +315,7 @@
 		8F104D0129C3742500AC95F4 /* ClassCode */ = {
 			isa = PBXGroup;
 			children = (
+				8F4FC28E29CCB32000445135 /* StaffInfo */,
 				8F104D0929C379E900AC95F4 /* RestaurantManager */,
 			);
 			path = ClassCode;
@@ -455,6 +456,56 @@
 			path = MainTabbarController;
 			sourceTree = "<group>";
 		};
+		8F4FC28E29CCB32000445135 /* StaffInfo */ = {
+			isa = PBXGroup;
+			children = (
+				8F4FC29029CCB33100445135 /* Cells */,
+				8F4FC29229CCB34000445135 /* ViewModel */,
+				8F4FC29129CCB33A00445135 /* View */,
+				8F4FC28F29CCB32800445135 /* ViewController */,
+			);
+			path = StaffInfo;
+			sourceTree = "<group>";
+		};
+		8F4FC28F29CCB32800445135 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8F4FC29029CCB33100445135 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5625F16E24CEDD8300AAA65E /* ManagerCallTableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8F4FC29129CCB33A00445135 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5625F16F24CEDD9200AAA65E /* CallManagerView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8F4FC29229CCB34000445135 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8F4FC29329CCB3C800445135 /* AppDefault */ = {
+			isa = PBXGroup;
+			children = (
+				F7409C6623E187120037652A /* LaunchScreen.storyboard */,
+				F7409C6123E187100037652A /* Main.storyboard */,
+			);
+			path = AppDefault;
+			sourceTree = "<group>";
+		};
 		CCD323CA21DF563C5D8089A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,6 +553,8 @@
 		F7409C5A23E187100037652A /* RestaurantManager_DATN */ = {
 			isa = PBXGroup;
 			children = (
+				F7409C6F23E196070037652A /* Assets.xcassets */,
+				8F4FC29329CCB3C800445135 /* AppDefault */,
 				8F104D9429C728BD00AC95F4 /* Base */,
 				F7AD51D723E41685008DFF3A /* App */,
 				8F104D0129C3742500AC95F4 /* ClassCode */,
@@ -510,13 +563,9 @@
 				F7AD51D923E4169C008DFF3A /* Helpers */,
 				F7AD51D823E41692008DFF3A /* Controllers */,
 				84F706B929C449E0000CA7E2 /* Model */,
-				F7409C6123E187100037652A /* Main.storyboard */,
-				F7409C6623E187120037652A /* LaunchScreen.storyboard */,
-				F7409C6F23E196070037652A /* Assets.xcassets */,
 				F7409C6923E187120037652A /* Info.plist */,
 				8441DB04299B2D5100165FBB /* GoogleService-Info.plist */,
 				F744DFD32470EC020086753F /* RestaurantManager_DATN-Bridging-Header.h */,
-				F747BDE024836D4D0029B7CC /* PresentHandler.swift */,
 			);
 			path = RestaurantManager_DATN;
 			sourceTree = "<group>";
@@ -543,8 +592,6 @@
 			isa = PBXGroup;
 			children = (
 				F776C49423E5A3E7005901CC /* FeatureMenuViewController.swift */,
-				5625F16E24CEDD8300AAA65E /* ManagerCallTableViewCell */,
-				5625F16F24CEDD9200AAA65E /* CallManagerView */,
 			);
 			path = FeatureMenu;
 			sourceTree = "<group>";
@@ -711,6 +758,7 @@
 		F7AD51D923E4169C008DFF3A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F747BDE024836D4D0029B7CC /* PresentHandler.swift */,
 				8F104D8829C4C52700AC95F4 /* Enum.swift */,
 				8F104D9C29C8993D00AC95F4 /* Constants.swift */,
 			);

@@ -137,6 +137,7 @@ class RestaurantViewController: UIViewController {
         checkBadgeValue()
     }
     
+    //check number in tabbar
     func checkBadgeValue() {
         if App.shared.staffInfo?.quyen != 1 && App.shared.staffInfo?.quyen != 2 && App.shared.staffInfo?.quyen != 3 {
             return
