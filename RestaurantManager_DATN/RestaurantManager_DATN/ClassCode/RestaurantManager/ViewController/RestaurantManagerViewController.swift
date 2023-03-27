@@ -60,10 +60,23 @@ class RestaurantManagerViewController: UIViewController {
                 self?.tableData = data
             }
             isTableLoaded = true
-            if !isBillLoaded {
+            if isBillLoaded {
                 self?.setupData()
             }
         }
+        
+        restaurentManagerViewModel.fetchUnpaidBill { [weak self] (data, error) in
+            if error != nil {
+                print(error.debugDescription)
+            } else if let data = data {
+                self?.currentBillData = data
+            }
+            isBillLoaded = true
+            if isTableLoaded {
+                self?.setupData()
+            }
+        }
+        
     }
     
     @objc func handleRefreshScroll(){
