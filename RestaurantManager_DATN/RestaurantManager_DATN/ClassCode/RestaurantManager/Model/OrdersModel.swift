@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-struct Orders: Decodable, Mappable {
+struct OrdersModel: Decodable, Mappable {
     
     var ordersId: String! = UUID().uuidString
     var billId: String? = ""
@@ -36,7 +36,7 @@ struct Orders: Decodable, Mappable {
         didDelete <- map["daxoa"]
     }
     
-    static func == (lhs: Orders, rhs: Orders) -> Bool {
+    static func == (lhs: OrdersModel, rhs: OrdersModel) -> Bool {
         return lhs.ordersId == rhs.ordersId
     }
     

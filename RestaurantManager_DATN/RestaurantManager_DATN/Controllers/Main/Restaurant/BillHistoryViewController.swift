@@ -76,8 +76,6 @@ extension BillHistoryViewController: UITableViewDataSource {
         cell.bill = bills[indexPath.item]
         return cell
     }
-    
-    
 }
 
 extension BillHistoryViewController: UITableViewDelegate {

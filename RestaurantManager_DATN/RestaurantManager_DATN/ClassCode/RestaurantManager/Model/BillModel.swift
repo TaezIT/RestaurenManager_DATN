@@ -16,8 +16,8 @@ struct BillModel: Decodable, Mappable {
     var staffid: String? = ""
     var timeCreate: Date = Date()
     var didDelete: Int? = 0
-    var orderList: [Orders]?
-    var staff: Staff?
+    var orderList: [OrdersModel]?
+    var staff: StaffModel?
     
     init?(map: Map) {
     }

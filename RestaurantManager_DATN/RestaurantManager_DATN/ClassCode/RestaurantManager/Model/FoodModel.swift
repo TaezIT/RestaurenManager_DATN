@@ -9,16 +9,16 @@
 import Foundation
 import ObjectMapper
 
-struct FoodModel: Decodable, Mappable, Hashable{
+struct FoodModel: Decodable, Mappable {
     var foodId: String! = UUID().uuidString
-    var foodName: String = ""
-    var unit: String = ""
-    var unitPrice: Double = 0
-    var detail: String = ""
-    var placeImage: String = ""
-    var idKindOfFood: String = ""
-    var inBill: Int = -1
-    var didDelete: Int = 0
+    var foodName: String? = ""
+    var unit: String? = ""
+    var unitPrice: Double? = 0
+    var detail: String? = ""
+    var placeImage: String? = ""
+    var idKindOfFood: String? = ""
+    var inBill: Int? = -1
+    var didDelete: Int? = 0
     
     init?(map: Map) {
     }
@@ -34,6 +34,11 @@ struct FoodModel: Decodable, Mappable, Hashable{
         inBill <- map["trongthucdon"]
         didDelete <- map["daxoa"]
     }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(foodId)
+    }
+
     
     static func == (lhs: FoodModel, rhs: FoodModel) -> Bool {
         return lhs.foodId == rhs.foodId

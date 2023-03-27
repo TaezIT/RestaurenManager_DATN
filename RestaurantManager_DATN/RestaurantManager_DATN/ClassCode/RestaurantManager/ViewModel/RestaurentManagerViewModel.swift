@@ -55,9 +55,9 @@ class RestaurentManagerViewModel {
     }
     
     func fetchAllData(ofBill bill: BillModel ,
-                      completion: @escaping ([Orders]?, Error?) -> Void) {
+                      completion: @escaping ([OrdersModel]?, Error?) -> Void) {
         
-        var datas = [Orders]()
+        var datas = [OrdersModel]()
         let db = Firestore.firestore()
         
         db.collection("Order").whereField("idhoadon", isEqualTo: bill.billId!).getDocuments { (snapshot, err) in
@@ -69,7 +69,7 @@ class RestaurentManagerViewModel {
             } else if snapshot != nil, !snapshot!.documents.isEmpty {
                 
                 snapshot!.documents.forEach({ (document) in
-                    if var order = Orders(JSON: document.data()) {
+                    if var order = OrdersModel(JSON: document.data()) {
                         self.fetchData(byOrder: order) { (dish, error) in
                             if let dish = dish {
                                 order.dish = dish
@@ -88,7 +88,7 @@ class RestaurentManagerViewModel {
         }
     }
     
-    func fetchData(byOrder order: Orders, completion: @escaping (FoodModel?, Error?) -> Void) {
+    func fetchData(byOrder order: OrdersModel, completion: @escaping (FoodModel?, Error?) -> Void) {
         let db = Firestore.firestore()
         guard let idmonan = order.foodId else {
             return
@@ -110,12 +110,12 @@ class RestaurentManagerViewModel {
         }
     }
     
-    func fetchData(forID id: String, completion: @escaping (Staff?, Error?) -> Void) {
+    func fetchData(forID id: String, completion: @escaping (StaffModel?, Error?) -> Void) {
         if id == "" {
             completion(nil,nil)
             return
         }
-//        var result = Staff()
+//        var result = StaffModel()
         let db = Firestore.firestore()
         
         db.collection("NhanVien").document(id).getDocument { (snapshot, err) in
@@ -126,7 +126,7 @@ class RestaurentManagerViewModel {
                 
             } else if let data = snapshot?.data() {
                 
-                if let data = Staff(JSON: data) {
+                if let data = StaffModel(JSON: data) {
 //                    result = data
                 }
 //                completion(result, nil)

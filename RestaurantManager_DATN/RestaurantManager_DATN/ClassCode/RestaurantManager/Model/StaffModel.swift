@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-struct Staff: Decodable, Mappable {
+struct StaffModel: Decodable, Mappable {
     var staffId: String! = UUID().uuidString
     var staffName: String = ""
     var phoneNumber: String = ""
@@ -18,6 +18,11 @@ struct Staff: Decodable, Mappable {
     var authority: Int = -1
     var idLoginAccount: String = ""
     var didSelected: Int = 0
+    
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(staffId)
+    }
     
     init?(map: Map) {
     }
