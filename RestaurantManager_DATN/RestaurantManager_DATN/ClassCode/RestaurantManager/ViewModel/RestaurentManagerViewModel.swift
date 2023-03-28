@@ -105,7 +105,7 @@ class RestaurentManagerViewModel {
                 
                 completion(dish, nil)
             } else {
-//                completion(FoodModel(), nil)
+                completion(FoodModel(), nil)
             }
         }
     }
@@ -115,7 +115,7 @@ class RestaurentManagerViewModel {
             completion(nil,nil)
             return
         }
-//        var result = StaffModel()
+        var result = StaffModel()
         let db = Firestore.firestore()
         
         db.collection("NhanVien").document(id).getDocument { (snapshot, err) in
@@ -127,9 +127,9 @@ class RestaurentManagerViewModel {
             } else if let data = snapshot?.data() {
                 
                 if let data = StaffModel(JSON: data) {
-//                    result = data
+                    result = data
                 }
-//                completion(result, nil)
+                completion(result, nil)
             } else {
                 completion(nil, nil)
             }

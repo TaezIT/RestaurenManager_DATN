@@ -50,6 +50,15 @@ class PresentHandler {
         rootVC.presentInFullScreen(vc, animated: true)
     }
     
+    func presentMakeOrderVCA(_ rootVC: UIViewController, tableData: TableModel? = nil) {
+        let vc = storyboard.instantiateViewController(withIdentifier: "MakeOrderViewController") as! MakeOrderViewController
+//        vc.table = tableData
+        if let rootVC = rootVC as? RestaurantManagerViewController {
+//            vc.delegate = rootVC
+        }
+        rootVC.presentInFullScreen(vc, animated: true)
+    }
+    
     func presentDishDetailsVC(_ rootVC: UIViewController, data: MonAn) {
         let vc = storyboard.instantiateViewController(withIdentifier: "DishDetailsViewController") as! DishDetailsViewController
         vc.dish = data

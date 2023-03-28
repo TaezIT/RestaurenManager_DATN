@@ -10,6 +10,10 @@ import Foundation
 import ObjectMapper
 
 struct FoodModel: Decodable, Mappable {
+    
+    init?(map: ObjectMapper.Map) {
+    }
+    
     var foodId: String! = UUID().uuidString
     var foodName: String? = ""
     var unit: String? = ""
@@ -20,7 +24,7 @@ struct FoodModel: Decodable, Mappable {
     var inBill: Int? = -1
     var didDelete: Int? = 0
     
-    init?(map: Map) {
+    init?() {
     }
     
     mutating func mapping(map: Map) {

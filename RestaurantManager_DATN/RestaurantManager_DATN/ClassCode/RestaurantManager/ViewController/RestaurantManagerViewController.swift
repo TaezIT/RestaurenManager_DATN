@@ -151,16 +151,16 @@ extension RestaurantManagerViewController: UICollectionViewDataSource, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        if isNotAuthored {
-//            return
-//        }
-//        let presentHandler = PresentHandler()
-//        guard let cell = collectionView.cellForItem(at: indexPath) as? TableCollectionViewCell else { return }
-//        if cell.state == .empty {
+        if isNotAuthored {
+            return
+        }
+        let presentHandler = PresentHandler()
+        guard let cell = collectionView.cellForItem(at: indexPath) as? TableCollectionViewCell else { return }
+        if cell.state == .empty {
 //            presentHandler.presentMakeOrderVC(self, tableData: currentTableData[indexPath.item])
-//        } else {
+        } else {
 //            presentHandler.presentTableBillDetailVC(self, table: currentTableData[indexPath.item])
-//        }
+        }
     }
     
     

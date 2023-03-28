@@ -24,7 +24,10 @@ struct StaffModel: Decodable, Mappable {
         hasher.combine(staffId)
     }
     
-    init?(map: Map) {
+    init?(map: ObjectMapper.Map) {
+    }
+    
+    init?() {
     }
     
     mutating func mapping(map: Map) {
