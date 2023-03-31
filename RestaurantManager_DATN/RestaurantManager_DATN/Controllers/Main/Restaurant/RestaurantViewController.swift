@@ -216,15 +216,6 @@ extension RestaurantViewController: UICollectionViewDelegateFlowLayout {
             presentHandler.presentTableBillDetailVC(self, table: currentTableData[indexPath.item])
         }
     }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        let yTranslation = scrollView.panGestureRecognizer.translation(in: scrollView).y
-//        if yTranslation >= 50 {
-//            navigationController?.setNavigationBarHidden(false, animated: true)
-//        } else if yTranslation <= -50 {
-//            navigationController?.setNavigationBarHidden(true, animated: true)
-//        }
-    }
 }
 
 extension RestaurantViewController: UISearchResultsUpdating {

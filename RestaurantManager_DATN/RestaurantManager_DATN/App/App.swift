@@ -50,8 +50,8 @@ final class App: UINavigationController {
                         self?.transitionToLoginView()
                     }
                     self?.staffInfo = data
-                    let vc = MainTabbarController()
-                    self?.changeViewController(vc)
+                    let vc = UIStoryboard.main.MainNavigationViewController
+                    self?.changeView(vc)
                 } else if error == nil {
                     fromVC?.showAlert(title: "Thông báo", message: "Tài khoản của bạn đã bị xoá hoặc không tồn tai trong hệ thống.")
                     do {
