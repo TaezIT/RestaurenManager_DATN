@@ -17,7 +17,7 @@ final class DishHeaderViewCell: UITableViewCell {
 //        }
 //    }
 //    
-//    func setupView() {
-//        dishCategoryLabel.text = dishCategory.name
-//    }
+    func setupView(text: String) {
+        dishCategoryLabel.text = text
+    }
 }

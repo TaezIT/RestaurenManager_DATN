@@ -453,7 +453,7 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		8F104D8A29C4C78000AC95F4 /* Model */ = {
+		8F104D8A29C4C78000AC95F4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				8F104D8C29C7126D00AC95F4 /* FoodModel.swift */,
@@ -463,8 +463,8 @@
 				84F0C1D029CC46F500B7E485 /* StaffModel.swift */,
 				8F0F794C29D73F8D00477CE5 /* DishCategoryModel.swift */,
 			);
-			name = Model;
-			path = ClassCode/RestaurantManager/Model;
+			name = Models;
+			path = ClassCode/RestaurantManager/Models;
 			sourceTree = "<group>";
 		};
 		8F104D8B29C4C78800AC95F4 /* ViewModel */ = {
@@ -620,7 +620,7 @@
 				F7AD51D723E41685008DFF3A /* App */,
 				8F104D9429C728BD00AC95F4 /* Base */,
 				8F104D0129C3742500AC95F4 /* ClassCode */,
-				8F104D8A29C4C78000AC95F4 /* Model */,
+				8F104D8A29C4C78000AC95F4 /* Models */,
 				8F104D0E29C3837800AC95F4 /* Resources */,
 				8F104D8629C4C50000AC95F4 /* Extension */,
 				F7AD51D923E4169C008DFF3A /* Helpers */,
@@ -1223,8 +1223,8 @@
 			baseConfigurationReference = 7E3E9228B1AABE7F753B9E11 /* Pods-RestaurantManager_DATN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z34H83T7JG;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RestaurantManager_DATN/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1233,6 +1233,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hdh.RestaurantManager-DATN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1243,8 +1244,8 @@
 			baseConfigurationReference = 531EBF3A93F23315527B2376 /* Pods-RestaurantManager_DATN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z34H83T7JG;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RestaurantManager_DATN/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1253,6 +1254,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hdh.RestaurantManager-DATN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
