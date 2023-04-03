@@ -2073,11 +2073,11 @@
             </objects>
             <point key="canvasLocation" x="1828.985507246377" y="2141.5178571428569"/>
         </scene>
-        <!--Manager-->
+        <!--Quản lí-->
         <scene sceneID="tcD-CD-dFy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Wy-ey-4tS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Manager" image="manager" id="3FX-lP-l5Q">
+                    <tabBarItem key="tabBarItem" title="Quản lí" image="manager" id="3FX-lP-l5Q">
                         <inset key="imageInsets" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>

@@ -27,7 +27,6 @@ final class FeatureMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         fetchData()
     }
     
@@ -61,20 +60,6 @@ final class FeatureMenuViewController: UIViewController {
     }
     
     @IBAction func btnCallManagerTapped(_ sender: Any) {
-//        self.showAlert(title: "Thông báo", message: "Chức năng đang được xây dựng. Vui lòng thử lại sau.")
-//        if let phoneCallURL = URL(string: "telprompt://\()") {
-//
-//            let application:UIApplication = UIApplication.shared
-//            if (application.canOpenURL(phoneCallURL)) {
-//                if #available(iOS 10.0, *) {
-//                    application.open(phoneCallURL, options: [:], completionHandler: nil)
-//                } else {
-//                    // Fallback on earlier versions
-//                     application.openURL(phoneCallURL as URL)
-//
-//                }
-//            }
-//        }
         let nib = UINib(nibName: "CallManagerView", bundle: nil)
         if let callManagerView = nib.instantiate(withOwner: self, options: nil).first as? CallManagerView {
             visualEffectView = UIVisualEffectView()
@@ -92,16 +77,13 @@ final class FeatureMenuViewController: UIViewController {
             self.view.addSubview(callManagerView)
             
             UIView.animate(withDuration: 0.25) {
-//                callManagerView.frame.origin.x = (UIScreen.main.bounds.width - width)/2
                 callManagerView.frame.origin.y = (UIScreen.main.bounds.height - height)/2
             }
         }
     }
     
     func btnCancelTappedInCallManagerView() {
-
         UIView.animate(withDuration: 0.25, animations: {
-//            self.callManagerView?.frame.origin.x = UIScreen.main.bounds.width
             self.callManagerView?.frame.origin.y = UIScreen.main.bounds.height
         }) { (_) in
             self.visualEffectView?.removeFromSuperview()
@@ -110,7 +92,7 @@ final class FeatureMenuViewController: UIViewController {
     }
     
     @IBAction func btnSupportTapped(_ sender: Any) {
-        self.showAlert(title: "Mọi yêu cầu hỗ trợ", message: "Xin vui lòng liên hệ: Hoàng Đình Huy\n SĐT: 0339519315\nEmail: vn01639519315@gmail.com")
+        self.showAlert(title: "Mọi yêu cầu hỗ trợ", message: "Xin vui lòng liên hệ: Phạm Tuấn Anh\n SĐT: 0854414188\nEmail: phtuananhitdev@gmail.com")
     }
     
     @IBAction func btnPrinterSettingTapped(_ sender: Any) {
