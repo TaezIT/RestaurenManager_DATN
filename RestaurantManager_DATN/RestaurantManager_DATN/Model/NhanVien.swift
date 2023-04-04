@@ -43,10 +43,7 @@ struct NhanVien: Decodable {
         
         db.collection("NhanVien").whereField("daxoa", isEqualTo: 0).order(by: "tennhanvien").getDocuments { (snapshot, err) in
             if err != nil {
-                
-                //                print("Error getting BanAn Data: \(err!.localizedDescription)")
                 completion(nil, err)
-                
             } else if let snapshot = snapshot, !snapshot.documents.isEmpty {
                 
                 snapshot.documents.forEach({ (document) in
@@ -67,12 +64,9 @@ struct NhanVien: Decodable {
         
         db.collection("NhanVien").order(by: "tennhanvien").getDocuments { (snapshot, err) in
             if err != nil {
-                
-                //                print("Error getting BanAn Data: \(err!.localizedDescription)")
                 completion(nil, err)
                 
             } else if let snapshot = snapshot, !snapshot.documents.isEmpty {
-                
                 snapshot.documents.forEach({ (document) in
                     if let data = NhanVien(JSON: document.data()) {
                         datas.append(data)
@@ -143,8 +137,6 @@ struct NhanVien: Decodable {
         
         db.collection("NhanVien").whereField("quyen", in: [1,4,5]).whereField("daxoa", isEqualTo: 0).order(by: "tennhanvien").getDocuments { (snapshot, err) in
             if err != nil {
-                
-                //                print("Error getting BanAn Data: \(err!.localizedDescription)")
                 completion(nil, err)
                 
             } else if let snapshot = snapshot, !snapshot.documents.isEmpty {

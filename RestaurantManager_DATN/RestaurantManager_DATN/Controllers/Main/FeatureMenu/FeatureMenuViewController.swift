@@ -92,7 +92,7 @@ final class FeatureMenuViewController: UIViewController {
     }
     
     @IBAction func btnSupportTapped(_ sender: Any) {
-        self.showAlert(title: "Mọi yêu cầu hỗ trợ", message: "Xin vui lòng liên hệ: Phạm Tuấn Anh\n SĐT: 0854414188\nEmail: phtuananhitdev@gmail.com")
+        self.showAlert(title: "Mọi yêu cầu hỗ trợ", message: "Xin vui lòng liên hệ: Phạm Tuấn Anh\n SĐT: 0854414188\nEmail: phtuananhit.dev@gmail.com")
     }
     
     @IBAction func btnPrinterSettingTapped(_ sender: Any) {
