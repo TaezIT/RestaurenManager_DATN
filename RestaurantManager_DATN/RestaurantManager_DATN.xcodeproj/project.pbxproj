@@ -73,6 +73,7 @@
 		8F36C38B29D73AFE00C92868 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F36C38929D73AFE00C92868 /* OrderViewController.swift */; };
 		8F36C38C29D73AFE00C92868 /* OrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F36C38A29D73AFE00C92868 /* OrderViewController.xib */; };
 		8F3DEADA29D743C1005E8D80 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DEAD929D743C1005E8D80 /* CartViewController.swift */; };
+		8F4E740E29E44FE100A75C65 /* StaffInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E740D29E44FE100A75C65 /* StaffInfoViewModel.swift */; };
 		F738CFC524894E1B003F8295 /* TableBillDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738CFC424894E1B003F8295 /* TableBillDetailViewController.swift */; };
 		F73D0E4C23E2D1D6006D8A30 /* UIViewController-Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D0E4B23E2D1D6006D8A30 /* UIViewController-Ex.swift */; };
 		F73D0E5023E2E51A006D8A30 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D0E4F23E2E51A006D8A30 /* App.swift */; };
@@ -197,6 +198,7 @@
 		8F36C38929D73AFE00C92868 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		8F36C38A29D73AFE00C92868 /* OrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderViewController.xib; sourceTree = "<group>"; };
 		8F3DEAD929D743C1005E8D80 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		8F4E740D29E44FE100A75C65 /* StaffInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffInfoViewModel.swift; sourceTree = "<group>"; };
 		E89FA3BDFFFCFB7812D2DDFF /* Pods_RestaurantManager_DATN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantManager_DATN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F738CFC424894E1B003F8295 /* TableBillDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBillDetailViewController.swift; sourceTree = "<group>"; };
 		F73D0E4B23E2D1D6006D8A30 /* UIViewController-Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Ex.swift"; sourceTree = "<group>"; };
@@ -569,6 +571,7 @@
 		8F4FC29229CCB34000445135 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8F4E740D29E44FE100A75C65 /* StaffInfoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1079,6 +1082,7 @@
 				8F104D9129C713CA00AC95F4 /* BillModel.swift in Sources */,
 				F75287A423EEA0E7007A9621 /* BillHistoryViewController.swift in Sources */,
 				8F13131329DC8F3500938A30 /* ReportModel.swift in Sources */,
+				8F4E740E29E44FE100A75C65 /* StaffInfoViewModel.swift in Sources */,
 				8441DB06299B442F00165FBB /* LoginViewController.swift in Sources */,
 				F75287B223EEBFFA007A9621 /* MainTabBarViewController.swift in Sources */,
 				F797881E24BB4C2B006FE58A /* ExportBillManagerViewController.swift in Sources */,
