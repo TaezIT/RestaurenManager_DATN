@@ -16,7 +16,6 @@ class StaffInfoViewModel {
             if error == nil {
                 let supervc =  ManagerDataViewController()
                 supervc.fetchData()
-                
             }
         }
     }

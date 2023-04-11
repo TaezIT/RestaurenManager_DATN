@@ -14,5 +14,4 @@ class ManagerCallTableViewCell: UITableViewCell {
     func configView(data: NhanVien) {
         lbDetail.text = "\(data.tennhanvien) - \(data.getPosition())"
     }
-    
 }

@@ -354,10 +354,13 @@
 		8F104D0129C3742500AC95F4 /* ClassCode */ = {
 			isa = PBXGroup;
 			children = (
-				8F0F794E29D7427700477CE5 /* CartTotals */,
-				8F36C38729D73AB700C92868 /* Order */,
-				8F4FC28E29CCB32000445135 /* StaffInfo */,
 				8F104D0929C379E900AC95F4 /* RestaurantManager */,
+				8F4FC28E29CCB32000445135 /* StaffInfo */,
+				8F36C38729D73AB700C92868 /* Order */,
+				8F0F794E29D7427700477CE5 /* CartTotals */,
+				F75287A823EEA90F007A9621 /* Kitchen */,
+				8F4E741329E5B45300A75C65 /* Menu */,
+				F75287A923EEA91B007A9621 /* Storage */,
 			);
 			path = ClassCode;
 			sourceTree = "<group>";
@@ -534,6 +537,55 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		8F4E740F29E5B3FC00A75C65 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F741308123EFFC4D00032E13 /* StorageItemsTableViewCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8F4E741029E5B40300A75C65 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F75287A123EE9157007A9621 /* StorageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8F4E741129E5B41800A75C65 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F73F010B23ED7E50000CF829 /* KitchenOrderTableViewCell */,
+				F750F608249120F4008C5604 /* MenuDishTableViewCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8F4E741229E5B42700A75C65 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F7E2A20D23EC11F200EB89D8 /* KitchenViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8F4E741329E5B45300A75C65 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				8F4E741429E5B45900A75C65 /* Controller */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		8F4E741429E5B45900A75C65 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F750F60B249120F4008C5604 /* MenuViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		8F4FC28E29CCB32000445135 /* StaffInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -641,8 +693,7 @@
 				8F104D0E29C3837800AC95F4 /* Resources */,
 				8F104D8629C4C50000AC95F4 /* Extension */,
 				F7AD51D923E4169C008DFF3A /* Helpers */,
-				F7AD51D823E41692008DFF3A /* Controllers */,
-				84F706B929C449E0000CA7E2 /* Model */,
+				F7AD51D823E41692008DFF3A /* General */,
 				F7409C6923E187120037652A /* Info.plist */,
 				8441DB04299B2D5100165FBB /* GoogleService-Info.plist */,
 				F744DFD32470EC020086753F /* RestaurantManager_DATN-Bridging-Header.h */,
@@ -689,9 +740,8 @@
 		F741308223EFFC8000032E13 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				84F706B929C449E0000CA7E2 /* Model */,
 				F75287A523EEA61F007A9621 /* Restaurant */,
-				F75287A823EEA90F007A9621 /* Kitchen */,
-				F75287A923EEA91B007A9621 /* Storage */,
 				F747BDDF248361820029B7CC /* Manager */,
 				F741307A23EFFA5400032E13 /* FeatureMenu */,
 				F7AD51DC23E427F0008DFF3A /* MainNavigationViewController.swift */,
@@ -764,10 +814,8 @@
 		F75287A823EEA90F007A9621 /* Kitchen */ = {
 			isa = PBXGroup;
 			children = (
-				F750F608249120F4008C5604 /* MenuDishTableViewCell */,
-				F750F60B249120F4008C5604 /* MenuViewController.swift */,
-				F73F010B23ED7E50000CF829 /* KitchenOrderTableViewCell */,
-				F7E2A20D23EC11F200EB89D8 /* KitchenViewController.swift */,
+				8F4E741229E5B42700A75C65 /* Controller */,
+				8F4E741129E5B41800A75C65 /* Cell */,
 			);
 			path = Kitchen;
 			sourceTree = "<group>";
@@ -775,8 +823,8 @@
 		F75287A923EEA91B007A9621 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				F741308123EFFC4D00032E13 /* StorageItemsTableViewCell */,
-				F75287A123EE9157007A9621 /* StorageViewController.swift */,
+				8F4E741029E5B40300A75C65 /* Controller */,
+				8F4E740F29E5B3FC00A75C65 /* Cell */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -827,13 +875,13 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		F7AD51D823E41692008DFF3A /* Controllers */ = {
+		F7AD51D823E41692008DFF3A /* General */ = {
 			isa = PBXGroup;
 			children = (
 				F75287AA23EEA929007A9621 /* Login */,
 				F741308223EFFC8000032E13 /* Main */,
 			);
-			path = Controllers;
+			path = General;
 			sourceTree = "<group>";
 		};
 		F7AD51D923E4169C008DFF3A /* Helpers */ = {
