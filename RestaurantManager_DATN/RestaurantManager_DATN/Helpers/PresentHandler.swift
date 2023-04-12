@@ -25,6 +25,19 @@ class PresentHandler {
         rootVC.presentInFullScreen(vc, animated: true)
     }
     
+    func presentStaffManagerDataVC(_ rootVC: UIViewController, manageType: ManageType, isForPickData: Bool = false) {
+        let vc = storyboard.instantiateViewController(withIdentifier: "ManagerDataViewController") as! ManagerDataViewController
+        vc.checkSelectCashier = true
+        vc.managerType = manageType
+        vc.isForPickData = isForPickData
+        
+        if let rootVC = rootVC as? ManagerPickedData {
+            vc.delegate = rootVC
+        }
+        
+        rootVC.presentInFullScreen(vc, animated: true)
+    }
+    
     func presentTableBillDetailVC(_ rootVC: UIViewController, table: BanAn? = nil) {
         let vc = storyboard.instantiateViewController(withIdentifier: "TableBillDetailViewController") as! TableBillDetailViewController
         vc.table = table

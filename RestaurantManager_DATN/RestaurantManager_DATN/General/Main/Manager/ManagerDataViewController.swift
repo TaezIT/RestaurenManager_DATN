@@ -35,6 +35,7 @@ class ManagerDataViewController: UIViewController {
     
     var managerType: ManageType?
     var isForPickData: Bool = false
+    var checkSelectCashier = false
     
     private var tableData: [BanAn] = []
     private var billData: [[HoaDon]] = []
@@ -178,7 +179,17 @@ class ManagerDataViewController: UIViewController {
                 print(error.debugDescription)
             } else if let data = data {
                 self?.staffData.removeAll()
-                self?.staffData = data
+                if self?.checkSelectCashier == false {
+                    self?.staffData = data
+                } else {
+                    var staffConvertData: [NhanVien] = []
+                    for item in data {
+                        if item.quyen == 0 || item.quyen == 1 || item.quyen == 2 {
+                            staffConvertData.append(item)
+                        }
+                    }
+                    self?.staffData = staffConvertData
+                }
             }
             self?.setupData()
         }

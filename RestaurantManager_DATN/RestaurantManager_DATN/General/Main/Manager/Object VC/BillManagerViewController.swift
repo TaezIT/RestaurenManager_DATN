@@ -95,22 +95,11 @@ class BillManagerViewController: UIViewController {
     }
     
     func fetchBillData() {
-//        if let id = bill?.idhoadon {
-//            HoaDon.fetchData(ofBillID: id) { [weak self] (data, error) in
-//                if let data = data {
-//                    self?.bill = data
-//                    self?.setupData()
-//                    self?.fetchTableData()
-//                }
-//            }
-//        }
-        
         self.fetchTableData()
     }
     
     func setupData() {
         orderTableView.reloadData()
-        
         lbTotalBill.text = "Tổng hóa đơn: " + (bill?.getTotalPayment().splittedByThousandUnits() ?? "0")
         txtStaff.text = bill?.staff?.tennhanvien
         txtCreatedDate.text = bill?.ngaytao.convertToString(withDateFormat: "dd-MM-yyyy hh:MM:ss")
@@ -129,7 +118,7 @@ class BillManagerViewController: UIViewController {
     
     @objc private func txtStaffTapped() {
         let presentHandler = PresentHandler()
-        presentHandler.presentManagerDataVC(self, manageType: .staff, isForPickData: true)
+        presentHandler.presentStaffManagerDataVC(self, manageType: .staff, isForPickData: true)
     }
     
     @IBAction func btnAddOrderTapped(_ sender: Any) {
@@ -161,13 +150,11 @@ class BillManagerViewController: UIViewController {
     @IBAction func btnConfirmWasTapped(_ sender: Any) {
         
         bill?.dathanhtoan = swPaid.isOn ? 1 : 0
-        
         if bill?.dathanhtoan == 1, bill?.idnhanvien == ""{
             self.showAlert(title: "Thiếu dữ liệu", message: "Vui lòng chọn nhân viên đã thanh toán hóa đơn") {
             }
             return
         }
-        
         if bill?.dathanhtoan == 1, txtCreatedDate.text?.isEmpty == true {
             self.showAlert(title: "Thiếu dữ liệu", message: "Vui lòng chọn ngày tạo hóa đơn") {
                 self.txtCreatedDate.becomeFirstResponder()

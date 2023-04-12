@@ -79,6 +79,8 @@ struct NhanVien: Decodable {
         }
     }
     
+    
+    
     static func fetchData(forID id: String, completion: @escaping (NhanVien?, Error?) -> Void) {
         if id == "" {
             completion(nil,nil)

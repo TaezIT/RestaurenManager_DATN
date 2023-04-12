@@ -16,6 +16,8 @@ class TableManagerViewController: UIViewController {
     @IBOutlet weak var btnDelete: UIButton!
     
     var table: BanAn?
+    var tableData: [BanAn] = []
+
     weak var delegate: ManagerDataViewController?
     
     override func viewDidLoad() {
@@ -24,52 +26,64 @@ class TableManagerViewController: UIViewController {
         // Do any additional setup after loading the view.
         addEndEditingTapGuesture()
         setupView()
+        dataTable()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         delegate?.fetchData()
     }
     
     func setupView() {
-        
         if table != nil {
             lbTitle.text = "Thay đổi bàn ăn"
             if table?.daxoa == 1 {
                 btnDelete.setTitle("Khôi phục", for: .normal)
             }
         } else {
-//            btnDelete.backgroundColor = .gray
             btnDelete.setTitle("Hủy", for: .normal)
         }
         txtTableNumber.text = table?.sobanan
         if table?.soluongghe != nil {
             txtTableSize.text = String(table!.soluongghe!)
         }
-        
-        
+    }
+    
+    func dataTable() {
+        BanAn.fetchAllDataAvailable { [weak self] (data, error) in
+            if error != nil {
+                print(error.debugDescription)
+            } else if let data = data {
+                self?.tableData = data
+            }
+        }
     }
     
     @IBAction func btnConfirmWasTapped(_ sender: Any) {
         
         let number = txtTableNumber.text ?? ""
         let size = ((txtTableSize.text ?? "") as NSString).intValue
-        
         let db = Firestore.firestore()
-        
         if table == nil {
             table = BanAn()
         }
-        
-        db.collection("BanAn").document(table!.idbanan!).setData([
-            "idbanan": table!.idbanan!,
-            "sobanan": number,
-            "soluongghe": size,
-            "daxoa": 0
-        ]) { err in
+        var checkCurrentTable = false
+        for item in tableData {
+            if item.sobanan == number {
+                checkCurrentTable = true
+            }
         }
-        
-        self.dismiss(animated: true)
+        if !checkCurrentTable {
+            db.collection("BanAn").document(table!.idbanan!).setData([
+                "idbanan": table!.idbanan!,
+                "sobanan": number,
+                "soluongghe": size,
+                "daxoa": 0
+            ]) { err in
+            }
+            self.dismiss(animated: true)
+        } else {
+            self.showAlert(title: "Thông báo", message: "Bàn ăn đã tồn tại \nVui lòng chọn số bàn khác")
+        }
     }
     
     @IBAction func btnDeleteTapped(_ sender: Any) {
