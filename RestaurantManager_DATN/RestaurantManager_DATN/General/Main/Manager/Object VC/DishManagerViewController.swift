@@ -123,49 +123,52 @@ class DishManagerViewController : UIViewController {
             dish = MonAn()
         }
         
-        if let pickedImageData = pickedImageData {
-            let storage = Storage.storage()
-            let storageRef = storage.reference()
+        self.showConfirmAlert(title: "Thông báo", message: "Bạn có chắc chắn muốn thay đổi thông tin!") {
             
-            let imageRef = storageRef.child("DishImage/" + dish!.idmonan + ".jpg")
-            let metaData = StorageMetadata()
-            metaData.contentType = "image/jpeg"
-            imageRef.putData(pickedImageData, metadata: metaData) { (_, _) in
+            if let pickedImageData = self.pickedImageData {
+                let storage = Storage.storage()
+                let storageRef = storage.reference()
                 
-                imageRef.downloadURL { (url, error) in
-                    guard let downloadURL = url else { return }
-                    db.collection("MonAn").document(self.dish!.idmonan!).setData([
-                        "idmonan": self.dish!.idmonan!,
-                        "tenmonan": dishName,
-                        "donvimonan": dishUnit,
-                        "dongia": dishPrice,
-                        "motachitiet": dishDescription,
-                        "idtheloaimonan": dishCategoryID,
-                        "diachianh": downloadURL.absoluteString,
-                        "trongthucdon": isInMenu,
-                        "daxoa": 0
-                    ]) { err in
-                        
+                let imageRef = storageRef.child("DishImage/" + self.dish!.idmonan + ".jpg")
+                let metaData = StorageMetadata()
+                metaData.contentType = "image/jpeg"
+                imageRef.putData(pickedImageData, metadata: metaData) { (_, _) in
+                    
+                    imageRef.downloadURL { (url, error) in
+                        guard let downloadURL = url else { return }
+                        db.collection("MonAn").document(self.dish!.idmonan!).setData([
+                            "idmonan": self.dish!.idmonan!,
+                            "tenmonan": dishName,
+                            "donvimonan": dishUnit,
+                            "dongia": dishPrice,
+                            "motachitiet": dishDescription,
+                            "idtheloaimonan": dishCategoryID,
+                            "diachianh": downloadURL.absoluteString,
+                            "trongthucdon": isInMenu,
+                            "daxoa": 0
+                        ]) { err in
+                            
+                        }
                     }
                 }
+            } else {
+                db.collection("MonAn").document(self.dish!.idmonan!).setData([
+                    "idmonan": self.dish!.idmonan!,
+                    "tenmonan": dishName,
+                    "donvimonan": dishUnit,
+                    "dongia": dishPrice,
+                    "motachitiet": dishDescription,
+                    "idtheloaimonan": dishCategoryID,
+                    "diachianh": self.dish?.diachianh ?? "",
+                    "trongthucdon": isInMenu,
+                    "daxoa": 0
+                ]) { err in
+                    
+                }
             }
-        } else {
-            db.collection("MonAn").document(self.dish!.idmonan!).setData([
-                "idmonan": self.dish!.idmonan!,
-                "tenmonan": dishName,
-                "donvimonan": dishUnit,
-                "dongia": dishPrice,
-                "motachitiet": dishDescription,
-                "idtheloaimonan": dishCategoryID,
-                "diachianh": dish?.diachianh ?? "",
-                "trongthucdon": isInMenu,
-                "daxoa": 0
-            ]) { err in
-                
-            }
+            
+            self.dismiss(animated: true)
         }
-        
-        self.dismiss(animated: true)
     }
     
     @IBAction func btnDeleteTapped(_ sender: Any) {

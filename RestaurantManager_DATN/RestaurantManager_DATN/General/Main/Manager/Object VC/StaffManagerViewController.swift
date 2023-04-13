@@ -41,7 +41,7 @@ class StaffManagerViewController: UIViewController {
     func setupView() {
         addEndEditingTapGuesture()
         if let staff = staff {
-            lbTitle.text = "Thay thay đổi nhân viên"
+            lbTitle.text = "Thay đổi nhân viên"
             if staff.daxoa == 1 {
                 btnDelete.setTitle("Khôi phục", for: .normal)
             }
@@ -124,23 +124,23 @@ class StaffManagerViewController: UIViewController {
             return
         }
         
-        if let staff = staff {
-            db.collection("NhanVien").document(staff.idnhanvien).updateData(["tennhanvien":staffName, "sodienthoai": staffPhone, "diachi": staffAddress, "quyen": author!]) { [weak self] error in
-                if error == nil {
-                    if let supervc = self?.presentingViewController as? ManagerDataViewController {
-                        supervc.fetchData()
+        self.showConfirmAlert(title: "Thông báo", message: "Bạn có chắc chắn muốn thay đổi thông tin!") {
+            if let staff = self.staff {
+                db.collection("NhanVien").document(staff.idnhanvien).updateData(["tennhanvien":staffName, "sodienthoai": staffPhone, "diachi": staffAddress, "quyen": author!]) { [weak self] error in
+                    if error == nil {
+                        if let supervc = self?.presentingViewController as? ManagerDataViewController {
+                            supervc.fetchData()
+                        }
+                        if self?.forStaffDetail ?? false {
+                            App.shared.staffInfo?.diachi = staffAddress
+                            App.shared.staffInfo?.sodienthoai = staffPhone
+                        }
+                        self?.dismiss(animated: true)
                     }
-                    if self?.forStaffDetail ?? false {
-                        App.shared.staffInfo?.diachi = staffAddress
-                        App.shared.staffInfo?.sodienthoai = staffPhone
-                    }
-                    self?.dismiss(animated: true)
                 }
+                return
             }
-            return
         }
-
-        
     }
     
     @IBAction func btnDeleteTapped(_ sender: Any) {

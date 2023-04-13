@@ -36,13 +36,10 @@ class KitchenViewController: UIViewController {
     
     var cookedOder: [Order] = []
     var uncookedOrder: [Order] = []
-    
     var currentCookedOrder: [Order] = []
     var currentUncookedOrder: [Order] = []
-    
     var tableData: [BanAn] = []
     var billData: [HoaDon] = []
-    
     var autoFetchTimer: Timer?
     
     override func viewDidLoad() {
@@ -67,12 +64,57 @@ class KitchenViewController: UIViewController {
         
         autoFetchTimer?.invalidate()
         lastUpdateTimer?.invalidate()
-        
         lastUpdateTimer = Timer.scheduledTimer(withTimeInterval: 2, repeats: false) {_ in
             self.fetchData()
             self.lastUpdateTimer = nil
             self.autoFetchTimer = Timer.scheduledTimer(withTimeInterval: 30, repeats: true) {_ in
                 self.fetchData()
+            }
+        }
+    }
+    
+    func setupData() {
+        tableRefreshControl.endRefreshing()
+        orderTableView.reloadData()
+        checkBadgeValue()
+    }
+    
+    func checkBadgeValue() {
+        if App.shared.staffInfo?.quyen != 1 && App.shared.staffInfo?.quyen != 4 {
+            return
+        }
+        
+        let badgeValue = uncookedOrder.filter({ $0.trangthai == 0 }).count
+        if badgeValue == 0 {
+            self.tabBarController?.tabBar.items?[1].badgeValue = nil
+            return
+        }
+        self.tabBarController?.tabBar.items?[1].badgeValue = String(badgeValue)
+    }
+    
+    private func setupViews() {
+        if App.shared.staffInfo?.quyen != 1 && App.shared.staffInfo?.quyen != 4 {
+            btnMenu.isEnabled = false
+            btnMenu.tintColor = .lightGray
+        }
+        addEndEditingTapGuesture()
+        tableSearchController.searchResultsUpdater = self
+        tableSearchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = tableSearchController
+        
+        navigationItem.hidesSearchBarWhenScrolling = false
+        
+        orderTableView.refreshControl = tableRefreshControl
+        orderTableView.dataSource = self
+        orderTableView.delegate = self
+        
+        orderTableView.register(UINib(nibName: tableViewProperties.rowNibName, bundle: nil), forCellReuseIdentifier: tableViewProperties.rowID)
+    }
+    
+    private func checkStaffAuthorities() {
+        if kitchenSegmentedControl.numberOfSegments >= 2 {
+            for index in 1..<kitchenSegmentedControl.numberOfSegments {
+                kitchenSegmentedControl.setEnabled(false, forSegmentAt: index)
             }
         }
     }
@@ -127,52 +169,6 @@ class KitchenViewController: UIViewController {
         
     }
     
-    func setupData() {
-        tableRefreshControl.endRefreshing()
-        orderTableView.reloadData()
-        checkBadgeValue()
-    }
-    
-    func checkBadgeValue() {
-        if App.shared.staffInfo?.quyen != 1 && App.shared.staffInfo?.quyen != 4 {
-            return
-        }
-        
-        let badgeValue = uncookedOrder.filter({ $0.trangthai == 0 }).count
-        if badgeValue == 0 {
-            self.tabBarController?.tabBar.items?[1].badgeValue = nil
-            return
-        }
-        self.tabBarController?.tabBar.items?[1].badgeValue = String(badgeValue)
-    }
-    
-    private func setupViews() {
-        if App.shared.staffInfo?.quyen != 1 && App.shared.staffInfo?.quyen != 4 {
-            btnMenu.isEnabled = false
-            btnMenu.tintColor = .lightGray
-        }
-        addEndEditingTapGuesture()
-        tableSearchController.searchResultsUpdater = self
-        tableSearchController.obscuresBackgroundDuringPresentation = false
-        navigationItem.searchController = tableSearchController
-        
-        navigationItem.hidesSearchBarWhenScrolling = false
-        
-        orderTableView.refreshControl = tableRefreshControl
-        orderTableView.dataSource = self
-        orderTableView.delegate = self
-        
-        orderTableView.register(UINib(nibName: tableViewProperties.rowNibName, bundle: nil), forCellReuseIdentifier: tableViewProperties.rowID)
-    }
-    
-    private func checkStaffAuthorities() {
-        if kitchenSegmentedControl.numberOfSegments >= 2 {
-            for index in 1..<kitchenSegmentedControl.numberOfSegments {
-                kitchenSegmentedControl.setEnabled(false, forSegmentAt: index)
-            }
-        }
-    }
-    
     @IBAction func kitchenSegmentedControlValueChanged(_ sender: Any) {
         orderTableView.reloadData()
     }
@@ -186,6 +182,19 @@ class KitchenViewController: UIViewController {
 extension KitchenViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if kitchenSegmentedControl.selectedSegmentIndex == 0 {
+            if section == 0 {
+                return currentUncookedOrder.filter{ $0.trangthai == 0}.count
+            }
+            return currentUncookedOrder.filter{ $0.trangthai == 1}.count
+        }
+        if section == 0 {
+            return currentCookedOrder.filter{ $0.trangthai == 2}.count
+        }
+        return currentCookedOrder.filter{ $0.trangthai == 3}.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -211,18 +220,6 @@ extension KitchenViewController: UITableViewDataSource {
             return nil
         }
         return "   " + "Đã hoàn thành"
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if kitchenSegmentedControl.selectedSegmentIndex == 0 {
-            if section == 0 {
-                return currentUncookedOrder.filter{ $0.trangthai == 0}.count
-            }
-            return currentUncookedOrder.filter{ $0.trangthai == 1}.count
-        }
-        if section == 0 {
-            return currentCookedOrder.filter{ $0.trangthai == 2}.count
-        }
-        return currentCookedOrder.filter{ $0.trangthai == 3}.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -266,35 +263,6 @@ extension KitchenViewController: UITableViewDelegate {
         return true
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if App.shared.staffInfo?.quyen == 1 || App.shared.staffInfo?.quyen == 2 || App.shared.staffInfo?.quyen == 3 || App.shared.staffInfo?.quyen == 4 {
-            let present = PresentHandler()
-            var table: BanAn?
-            if kitchenSegmentedControl.selectedSegmentIndex == 0 {
-                var addition = 0
-                if indexPath.section == 1 {
-                    addition = tableView.numberOfRows(inSection: 0)
-                }
-                let bill = billData.first(where: { $0.idhoadon == currentUncookedOrder[indexPath.item + addition].idhoadon})
-                table = tableData.first(where: { $0.idbanan == bill?.idbanan})
-                table?.bill = bill
-            } else if kitchenSegmentedControl.selectedSegmentIndex == 1 {
-                var addition = 0
-                if indexPath.section == 1 {
-                    addition = tableView.numberOfRows(inSection: 0)
-                }
-                let bill = billData.first(where: { $0.idhoadon == currentCookedOrder[indexPath.item + addition].idhoadon})
-                table = tableData.first(where: { $0.idbanan == bill?.idbanan})
-                table?.bill = bill
-            }
-            if table?.bill?.dathanhtoan == 1 {
-                present.presentBillManagerVC(self, bill: table?.bill, forBillHistory: true)
-                return
-            }
-            present.presentTableBillDetailVC(self, table: table)
-        }
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
@@ -354,6 +322,37 @@ extension KitchenViewController: UITableViewDelegate {
         }
         return [hoantac]
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if App.shared.staffInfo?.quyen == 1 || App.shared.staffInfo?.quyen == 2 || App.shared.staffInfo?.quyen == 3 || App.shared.staffInfo?.quyen == 4 {
+            let present = PresentHandler()
+            var table: BanAn?
+            if kitchenSegmentedControl.selectedSegmentIndex == 0 {
+                var addition = 0
+                if indexPath.section == 1 {
+                    addition = tableView.numberOfRows(inSection: 0)
+                }
+                let bill = billData.first(where: { $0.idhoadon == currentUncookedOrder[indexPath.item + addition].idhoadon})
+                table = tableData.first(where: { $0.idbanan == bill?.idbanan})
+                table?.bill = bill
+            } else if kitchenSegmentedControl.selectedSegmentIndex == 1 {
+                var addition = 0
+                if indexPath.section == 1 {
+                    addition = tableView.numberOfRows(inSection: 0)
+                }
+                let bill = billData.first(where: { $0.idhoadon == currentCookedOrder[indexPath.item + addition].idhoadon})
+                table = tableData.first(where: { $0.idbanan == bill?.idbanan})
+                table?.bill = bill
+            }
+            if table?.bill?.dathanhtoan == 1 {
+                present.presentBillManagerVC(self, bill: table?.bill, forBillHistory: true)
+                return
+            }
+            present.presentTableBillDetailVC(self, table: table)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 }
 
 extension KitchenViewController: UISearchResultsUpdating {
