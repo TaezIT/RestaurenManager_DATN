@@ -10,6 +10,7 @@ import Foundation
 import ObjectMapper
 
 struct DishCategoryModel: Decodable, Mappable {
+    
     var idDishCategory: String! = UUID().uuidString
     var nameDishCategory: String = ""
     var didDelete: Int = 0

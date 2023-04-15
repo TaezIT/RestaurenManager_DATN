@@ -59,4 +59,73 @@ struct StaffModel: Decodable, Mappable {
             return "nil"
         }
     }
+    
+    static func fetchAllData(completion: @escaping ([StaffModel]?, Error?) -> Void) {
+        var datas = [StaffModel]()
+        let db = Firestore.firestore()
+        
+        db.collection("NhanVien").order(by: "tennhanvien").getDocuments { (snapshot, err) in
+            if err != nil {
+                completion(nil, err)
+                
+            } else if let snapshot = snapshot, !snapshot.documents.isEmpty {
+                snapshot.documents.forEach({ (document) in
+                    if let data = StaffModel(JSON: document.data()) {
+                        datas.append(data)
+                    }
+                })
+                completion(datas, nil)
+            } else {
+                completion(datas, nil)
+            }
+        }
+    }
+    
+    static func fetchData(forID id: String, completion: @escaping (StaffModel?, Error?) -> Void) {
+        if id == "" {
+            completion(nil,nil)
+            return
+        }
+        var result = StaffModel()
+        let db = Firestore.firestore()
+        
+        db.collection("NhanVien").document(id).getDocument { (snapshot, err) in
+            if err != nil {
+                
+                print("Error getting BanAn Data: \(err!.localizedDescription)")
+                completion(nil, err)
+                
+            } else if let data = snapshot?.data() {
+                
+                if let data = StaffModel(JSON: data) {
+                    result = data
+                }
+                completion(result, nil)
+            } else {
+                completion(nil, nil)
+            }
+        }
+    }
+    
+    static func fetchAllManagerData(completion: @escaping ([StaffModel]?, Error?) -> Void) {
+        var datas = [StaffModel]()
+        let db = Firestore.firestore()
+        
+        db.collection("NhanVien").whereField("quyen", in: [1,4,5]).whereField("daxoa", isEqualTo: 0).order(by: "tennhanvien").getDocuments { (snapshot, err) in
+            if err != nil {
+                completion(nil, err)
+                
+            } else if let snapshot = snapshot, !snapshot.documents.isEmpty {
+                
+                snapshot.documents.forEach({ (document) in
+                    if let data = StaffModel(JSON: document.data()) {
+                        datas.append(data)
+                    }
+                })
+                completion(datas, nil)
+            } else {
+                completion(datas, nil)
+            }
+        }
+    }
 }

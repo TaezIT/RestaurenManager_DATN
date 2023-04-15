@@ -59,4 +59,37 @@ struct OrdersModel: Decodable, Mappable {
         }
     }
     
+    static func fetchAllData(ofBill bill: BillModel ,
+                             completion: @escaping ([OrdersModel]?, Error?) -> Void) {
+        
+        var datas = [OrdersModel]()
+        let db = Firestore.firestore()
+        
+        db.collection("Order").whereField("idhoadon", isEqualTo: bill.billId!).getDocuments { (snapshot, err) in
+            if err != nil {
+                
+                print("Error getting HoaDon Data: \(err!.localizedDescription)")
+                completion(nil, err)
+                
+            } else if snapshot != nil, !snapshot!.documents.isEmpty {
+                
+                snapshot!.documents.forEach({ (document) in
+                    if var order = OrdersModel(JSON: document.data()) {
+                        FoodModel.fetchData(byOrder: order) { (dish, error) in
+                            if let dish = dish {
+                                order.dish = dish
+                            }
+                            datas.append(order)
+                            if datas.count == snapshot?.documents.count {
+                                completion(datas, nil)
+                            }
+                        }
+                    }
+                })
+                
+            } else {
+                completion(datas, nil)
+            }
+        }
+    }
 }

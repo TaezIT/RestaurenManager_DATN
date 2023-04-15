@@ -2,7 +2,7 @@
 //  KitchenViewController.swift
 //  RestaurantManager_DATN
 //
-//  Created by Pham Tuan Anh on 06/02/2023.
+//  Created by Pham Tuan Anh on 16/03/2023.
 //  Copyright © 2023 Pham Tuan Anh. All rights reserved.
 //
 
@@ -18,7 +18,6 @@ class KitchenViewController: UIViewController {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.placeholder = "Tìm Order..."
         searchController.hidesNavigationBarDuringPresentation = true
-        //        searchController.searchResultsUpdater = self
         return searchController
     } ()
     
@@ -44,11 +43,8 @@ class KitchenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         setupViews()
         fetchData()
-        
         autoFetchTimer = Timer.scheduledTimer(withTimeInterval: 30, repeats: true) {_ in
             self.fetchData()
         }
@@ -61,7 +57,6 @@ class KitchenViewController: UIViewController {
     var lastUpdateTimer: Timer?
     
     func orderStateUpdated() {
-        
         autoFetchTimer?.invalidate()
         lastUpdateTimer?.invalidate()
         lastUpdateTimer = Timer.scheduledTimer(withTimeInterval: 2, repeats: false) {_ in
@@ -83,7 +78,6 @@ class KitchenViewController: UIViewController {
         if App.shared.staffInfo?.quyen != 1 && App.shared.staffInfo?.quyen != 4 {
             return
         }
-        
         let badgeValue = uncookedOrder.filter({ $0.trangthai == 0 }).count
         if badgeValue == 0 {
             self.tabBarController?.tabBar.items?[1].badgeValue = nil
@@ -101,13 +95,10 @@ class KitchenViewController: UIViewController {
         tableSearchController.searchResultsUpdater = self
         tableSearchController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = tableSearchController
-        
         navigationItem.hidesSearchBarWhenScrolling = false
-        
         orderTableView.refreshControl = tableRefreshControl
         orderTableView.dataSource = self
         orderTableView.delegate = self
-        
         orderTableView.register(UINib(nibName: tableViewProperties.rowNibName, bundle: nil), forCellReuseIdentifier: tableViewProperties.rowID)
     }
     
@@ -137,7 +128,6 @@ class KitchenViewController: UIViewController {
                 self?.cookedOder.sort{ $0.trangthai < $1.trangthai}
                 self?.uncookedOrder.sort{ $0.ngaytao?.timeIntervalSince1970 ?? 0 < $1.ngaytao?.timeIntervalSince1970 ?? 0}
                 self?.uncookedOrder.sort{ $0.trangthai < $1.trangthai}
-                
                 self?.currentCookedOrder = self?.cookedOder ?? []
                 self?.currentUncookedOrder = self?.uncookedOrder ?? []
             }
@@ -253,7 +243,6 @@ extension KitchenViewController: UITableViewDataSource {
 extension KitchenViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return tableViewProperties.rowHeight
-//        return UIScreen.main.bounds.height/12
     }
     
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
@@ -363,7 +352,7 @@ extension KitchenViewController: UISearchResultsUpdating {
         text = text.lowercased()
         if let _ = text.lowercased().range(of: "bàn") {
             text = text.replacingOccurrences(of: "bàn", with: "")
-        } else if let  _ = text.lowercased().range(of: "ban") {
+        } else if let _ = text.lowercased().range(of: "ban") {
             text = text.replacingOccurrences(of: "ban", with: "")
         }
         text = text.trimmingCharacters(in: .whitespacesAndNewlines)

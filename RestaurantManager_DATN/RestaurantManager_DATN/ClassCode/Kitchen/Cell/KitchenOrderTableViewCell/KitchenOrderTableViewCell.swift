@@ -2,7 +2,7 @@
 //  OrderTableViewCell.swift
 //  
 //
-//  Created by Pham Tuan Anh on 07/02/2023.
+//  Created by Pham Tuan Anh on 07/04/2023.
 //
 
 import UIKit
@@ -54,7 +54,6 @@ class KitchenOrderTableViewCell: UITableViewCell {
         delegate?.showConfirmAlert (title: "Xác nhận lại", message: "Xác nhận " + (order?.getState(forNextState: true).lowercased() ?? "") + " \(order?.dish?.tenmonan ?? "") (Bàn \(table?.sobanan ?? "nil") )") {
             if var order = self.order, order.trangthai >= 0 {
                 order.trangthai = order.trangthai + 1
-                //            order.ngaytao = Date()
                 self.order = order
                 self.btnFinish.isEnabled = false
                 self.btnFinish.backgroundColor = .systemGray
@@ -69,6 +68,5 @@ class KitchenOrderTableViewCell: UITableViewCell {
                 }
             }
         }
-        
     }
 }

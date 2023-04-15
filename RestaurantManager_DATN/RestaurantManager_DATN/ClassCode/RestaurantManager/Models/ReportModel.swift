@@ -38,4 +38,39 @@ struct ReportModel: Decodable, Mappable {
         typeReport <- map["loaibaocao"]
         didDelete <- map["daxoa"]
     }
+    
+    static func getAllReferanceData(of snapshot: QuerySnapshot, completion: @escaping ([ReportModel]?, Error?) -> Void) {
+        
+        var reports = [ReportModel]()
+        
+        snapshot.documents.forEach({ (document) in
+            if var baocao = ReportModel(JSON: document.data()) {
+                
+                StaffModel.fetchData(forID: baocao.idStaff) { (staff, error) in
+                    baocao.staff = staff
+                    reports.append(baocao)
+                    if reports.count == snapshot.documents.count {
+                        completion(reports, nil)
+                    }
+                }
+            }
+        })
+    }
+    
+    static func fetchAllData(completion: @escaping ([ReportModel]?, Error?) -> Void) {
+        let db = Firestore.firestore()
+        
+        db.collection("BaoCao").order(by: "ngaytao").getDocuments { (snapshot, err) in
+            if err != nil {
+                
+                completion(nil, err)
+                
+            } else if let snapshot = snapshot, !snapshot.documents.isEmpty {
+                
+                getAllReferanceData(of: snapshot, completion: completion)
+            } else {
+                completion([], nil)
+            }
+        }
+    }
 }
