@@ -173,28 +173,7 @@ class CreateReportManagerViewController: UIViewController {
                     orderCounter = 0
                     moneyCounter = 0
                 }
-                
-//                currentDate = datas?.last?.ngaytao?.convertToString(withDateFormat: "dd/MM/yyyy") ?? ""
-//                for item in datas?.reversed() ?? [] {
-//                    if currentDate == item.ngaytao?.convertToString(withDateFormat: "dd/MM/yyyy") {
-//                        orderCounter += item.soluong
-//                        moneyCounter += Double(item.soluong)*(item.dish?.dongia ?? 0)
-//                        if billDict[item.idhoadon ?? ""] == nil {
-//                            billDict[item.idhoadon ?? ""] = true
-//                        }
-//                    } else {
-//                        reportContent += " \(currentDate)\t \(orderCounter)\t \(billDict.count)\t \(moneyCounter.splittedByThousandUnits())\n"
-//                        totalBill += billDict.count
-//                        totalMoney += moneyCounter
-//                        totalOrder += orderCounter
-//                        currentDate = item.ngaytao?.convertToString(withDateFormat: "dd/MM/yyyy") ?? ""
-//                        billDict.removeAll()
-//                        billDict[item.idhoadon ?? ""] = true
-//                        orderCounter = item.soluong
-//                        moneyCounter = Double(item.soluong)*(item.dish?.dongia ?? 0)
-//                    }
-//                }
-//                reportContent += " \(currentDate)\t \(orderCounter)\t \(billDict.count)\t \(moneyCounter.splittedByThousandUnits())\n"
+            
                 totalBill += billDict.count
                 totalMoney += moneyCounter
                 totalOrder += orderCounter
@@ -424,6 +403,18 @@ class CreateReportManagerViewController: UIViewController {
 
 extension CreateReportManagerViewController: SpreadsheetViewDataSource {
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, heightForRow column: Int) -> CGFloat {
+        switch reportType {
+        case.income:
+            if (column != 0)  && (column != reportDatas.count) {
+                return 0
+            }
+        case .none:
+            return 50
+        case .some(.bestSeller):
+            return 50
+        case .some(.stuffUsed):
+            return 50
+        }
         return 50
     }
     
@@ -516,7 +507,7 @@ extension CreateReportManagerViewController: SpreadsheetViewDataSource {
             } else {
                 let cell = spreadsheetView.dequeueReusableCell(withReuseIdentifier: String(describing: TextCell.self), for: indexPath) as! TextCell
                 if yellowRow.contains(indexPath.row - 1) {
-                    cell.backgroundColor = .yellow
+                    cell.backgroundColor = .red
                 } else {
                     cell.backgroundColor = .white
                 }

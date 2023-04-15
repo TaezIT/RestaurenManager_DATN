@@ -76,21 +76,6 @@ class ReportDetailsManagerViewController: UIViewController {
                 }
             }
         }
-//        switch reportType {
-//        case .income:
-//            break
-//        case .bestSeller:
-//            let reportContent = report.noidung.replacingOccurrences(of: "\\n", with: "\n").replacingOccurrences(of: "\\t", with: "\t")
-//            let splited = reportContent.split { $0 == "\n"}
-//            for item in splited {
-//                let item = String(item)
-//                reportDatas.append(item.split { $0 == "\t"}.map(String.init))
-//            }
-//        case .stuffUsed:
-//            break
-//        default:
-//            break
-//        }
         let attributed = NSMutableAttributedString()
         let title = NSAttributedString(string: report.tieude, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 20)])
         let subtitle = NSAttributedString(string: "\n Người tạo: \(report.staff?.tennhanvien ?? "")", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15)])

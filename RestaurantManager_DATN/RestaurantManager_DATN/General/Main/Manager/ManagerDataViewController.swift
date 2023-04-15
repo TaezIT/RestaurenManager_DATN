@@ -562,28 +562,6 @@ extension ManagerDataViewController: UITableViewDataSource {
         return nil
     }
     
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        if tableView.numberOfSections <= 1 {
-//            return 0
-//        }
-//        return 50
-//    }
-    
-//    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-//        return 0
-//    }
-//
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        if managerType == .dish {
-//            guard let headerCell = tableView.dequeueReusableCell(withIdentifier: "DishHeaderTableViewCell") as? DishHeaderViewCell else {
-//                fatalError("MenuViewController: Can't dequeue for DishHeaderViewCell")
-//            }
-//            headerCell.dishCategoryLabel.text = currentDishCategoryData[section].tentheloaimonan
-//            return headerCell
-//        }
-//        return nil
-//    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         switch managerType {
