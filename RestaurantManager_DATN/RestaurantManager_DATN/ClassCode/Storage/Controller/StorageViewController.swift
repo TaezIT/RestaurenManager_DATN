@@ -24,7 +24,6 @@ class StorageViewController: UIViewController {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.placeholder = "Tìm kiếm..."
         searchController.hidesNavigationBarDuringPresentation = true
-        //        searchController.searchResultsUpdater = self
         return searchController
     } ()
     
@@ -44,9 +43,6 @@ class StorageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
         setupViews()
         fetchData()
     }
@@ -56,9 +52,7 @@ class StorageViewController: UIViewController {
         tableSearchController.searchResultsUpdater = self
         tableSearchController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = tableSearchController
-        
         navigationItem.hidesSearchBarWhenScrolling = false
-        
         btnCreateBill.isEnabled = false
         btnCreateBill.tintColor = .clear
         
