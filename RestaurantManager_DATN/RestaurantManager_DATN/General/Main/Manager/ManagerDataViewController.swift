@@ -104,8 +104,6 @@ class ManagerDataViewController: UIViewController {
         case .dish:
             title += "món ăn"
             vColumnTitleHeight.constant = 0
-//            lb1.text = "TT Món ăn"
-//            lb3.text = "In Menu"
         case .importBill:
             title += "hóa đơn nhập"
             lb1.text = "Tên VP"
@@ -610,7 +608,6 @@ extension ManagerDataViewController: UITableViewDataSource {
         case .report:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") else { fatalError("") }
             cell.textLabel?.text = currentReportData[indexPath.section][indexPath.item].tieude
-            
             return cell
         default: break
         }
@@ -692,12 +689,6 @@ extension ManagerDataViewController: UITableViewDelegate  {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        let yTranslation = scrollView.panGestureRecognizer.translation(in: scrollView).y
-//        if yTranslation >= 50 {
-//            navigationController?.setNavigationBarHidden(false, animated: true)
-//        } else if yTranslation <= -50 {
-//            navigationController?.setNavigationBarHidden(true, animated: true)
-//        }
     }
 }
 

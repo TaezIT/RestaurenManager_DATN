@@ -394,6 +394,7 @@ class CreateReportManagerViewController: UIViewController {
                 }
             }
         }
+        self.dismiss(animated: true)
     }
     
     @IBAction func btnBackWasTapped(_ sender: Any) {
@@ -406,7 +407,9 @@ extension CreateReportManagerViewController: SpreadsheetViewDataSource {
         switch reportType {
         case.income:
             if (column != 0)  && (column != reportDatas.count) {
-                return 0
+                if yellowRow.contains(column-1) {
+                    return 0
+                }
             }
         case .none:
             return 50
@@ -552,7 +555,6 @@ extension CreateReportManagerViewController: SpreadsheetViewDataSource {
                 }
                 cell.label.textAlignment = .center
                 cell.setNeedsLayout()
-
                 return cell
             }  else if indexPath.row >= startHeaderRow ?? reportDatas.count + 1 {
                 let cell = spreadsheetView.dequeueReusableCell(withReuseIdentifier: String(describing: HeaderCell.self), for: indexPath) as! HeaderCell

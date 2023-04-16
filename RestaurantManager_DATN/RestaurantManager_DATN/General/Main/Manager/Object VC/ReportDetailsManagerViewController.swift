@@ -113,6 +113,20 @@ class ReportDetailsManagerViewController: UIViewController {
 }
 extension ReportDetailsManagerViewController: SpreadsheetViewDataSource {
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, heightForRow column: Int) -> CGFloat {
+        switch reportType {
+        case.income:
+            if (column != 0)  && (column != reportDatas.count) {
+                if yellowRow.contains(column-1) {
+                    return 0
+                }
+            }
+        case .none:
+            return 50
+        case .some(.bestSeller):
+            return 50
+        case .some(.stuffUsed):
+            return 50
+        }
         return 50
     }
     
@@ -120,12 +134,6 @@ extension ReportDetailsManagerViewController: SpreadsheetViewDataSource {
         return 1
     }
     
-//    func frozenColumns(in spreadsheetView: SpreadsheetView) -> Int {
-//        if reportType == .income {
-//            return 1
-//        }
-//        return 0
-//    }
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, widthForColumn column: Int) -> CGFloat {
         switch reportType {
         case .income:
