@@ -14,6 +14,7 @@ class AddStaffManagerViewController: UIViewController {
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var txtRePassword: TextField!
     @IBOutlet weak var txtStaffName: UITextField!
     @IBOutlet weak var swStaffAuthority: UISegmentedControl!
     @IBOutlet weak var swStaffAuthority2: UISegmentedControl!
@@ -48,6 +49,8 @@ class AddStaffManagerViewController: UIViewController {
         let db = Firestore.firestore()
         
         let staffName = txtStaffName.text ?? ""
+        let password = txtPassword.text ?? ""
+        let rePassword = txtRePassword.text ?? ""
         let staffPhone = txtStaffPhone.text ?? ""
         let staffAddress = txtStaffAddress.text ?? ""
         var author: Int? = nil
@@ -59,11 +62,62 @@ class AddStaffManagerViewController: UIViewController {
             return
         }
         
+        if txtEmail.text?.isValidEmail() == false {
+            self.showAlert(title: "Email bạn nhập không hợp lệ", message: "") { [weak self] in
+                self?.txtEmail.becomeFirstResponder()
+            }
+            return
+        }
+        
         if txtPassword.text?.isEmpty == true {
             self.showAlert(title: "Vui lòng nhập mật khẩu đăng nhập", message: "") { [weak self] in
                 self?.txtPassword.becomeFirstResponder()
             }
-            
+            return
+        }
+        
+    
+        
+        if password != rePassword {
+            self.showAlert(title: "Mật khẩu nhập lại không đúng", message: "") { [weak self] in
+                self?.txtRePassword.becomeFirstResponder()
+            }
+            return
+        }
+        
+        if txtPassword.text?.isValidPassword() == false || txtRePassword.text?.isValidPassword() == false {
+            self.showAlert(title: "Mật khẩu phải có 8-20 kí tự và không được chứa các kí tự đặc biệt ", message: "") { [weak self] in
+                self?.txtPassword.becomeFirstResponder()
+            }
+            return
+        }
+        
+        if txtStaffName.text?.isEmpty == true {
+            self.showAlert(title: "Vui lòng nhập tên nhân viên", message: "") { [weak self] in
+                self?.txtStaffName.becomeFirstResponder()
+            }
+            return
+        }
+     
+        
+        if txtStaffPhone.text?.isEmpty == true {
+            self.showAlert(title: "Vui lòng nhập số điện thoại nhân viên", message: "") { [weak self] in
+                self?.txtStaffPhone.becomeFirstResponder()
+            }
+            return
+        }
+        
+        if PresentHandler.isPhoneValid(self.txtStaffPhone.text) == false {
+            self.showAlert(title: "Số điện thoại nhân viên không hợp lệ", message: "") { [weak self] in
+                self?.txtStaffPhone.becomeFirstResponder()
+            }
+            return
+        }
+        
+        if txtStaffAddress.text?.isEmpty == true {
+            self.showAlert(title: "Vui lòng nhập địa chỉ nhân viên", message: "") { [weak self] in
+                self?.txtStaffAddress.becomeFirstResponder()
+            }
             return
         }
         

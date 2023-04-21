@@ -190,4 +190,40 @@ class PresentHandler {
         }
         rootVC.presentInFullScreen(vc, animated: true)
     }
+    
+    class func isPhoneValid(_ phoneStr: String?) -> (Bool) {
+            guard let phoneStr = phoneStr else {
+                return false
+            }
+            var phone = phoneStr.filter("0123456789".contains)
+            if phone.count < 9 {
+                return false
+            }
+            if (phone.count == 11 && phone.starts(with: "84")) || phone.count == 12 && phone.starts(with: "+84") || phone.count == 9 && !phone.starts(with: "0"){
+                phone = "0\(phone.suffix(9))"
+            }
+            if phone.count != 10 {
+                return false
+            }
+            var isValid = false
+            var telco = ""
+            switch phone.prefix(3) {
+            case "096", "097", "098", "086", "032", "033", "034", "035", "036", "037", "038", "039":
+                telco = "Viettel"
+                isValid = true
+                break
+            case "088", "091", "094", "081", "082", "083", "084", "085":
+                telco = "Vinaphone"
+                isValid = true
+                break
+            case "089", "090", "093", "070", "079", "077", "076", "078":
+                telco = "Mobifone"
+                isValid = true
+                break
+            default:
+                telco = ""
+                isValid = false
+            }
+            return isValid
+        }
 }

@@ -2903,13 +2903,13 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="x96-9w-mFq">
-                                <rect key="frame" x="20" y="192" width="384" height="295"/>
+                                <rect key="frame" x="20" y="192" width="384" height="340"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3jx-lm-Xkt">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="295"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="340"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tài khoản:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPo-fX-6XR">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="42"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="42.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="jze-bp-enA"/>
                                                     <constraint firstAttribute="width" constant="80" id="xip-xq-Plu"/>
@@ -2919,37 +2919,43 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mật khẩu:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwz-bS-acJ">
-                                                <rect key="frame" x="0.0" y="42" width="80" height="42.5"/>
+                                                <rect key="frame" x="0.0" y="42.5" width="80" height="42.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập lại " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2EC-Rv-JPS">
+                                                <rect key="frame" x="0.0" y="85" width="80" height="42.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên NV:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLc-cQ-fZb">
-                                                <rect key="frame" x="0.0" y="84.5" width="80" height="42"/>
+                                                <rect key="frame" x="0.0" y="127.5" width="80" height="42.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quyền:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTf-U2-IRa">
-                                                <rect key="frame" x="0.0" y="126.5" width="80" height="42"/>
+                                                <rect key="frame" x="0.0" y="170" width="80" height="42.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoN-0Y-a5T">
-                                                <rect key="frame" x="0.0" y="168.5" width="80" height="42"/>
+                                                <rect key="frame" x="0.0" y="212.5" width="80" height="42.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số ĐT:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nff-5R-KHR">
-                                                <rect key="frame" x="0.0" y="210.5" width="80" height="42.5"/>
+                                                <rect key="frame" x="0.0" y="255" width="80" height="42.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa chỉ:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxN-FD-qko">
-                                                <rect key="frame" x="0.0" y="253" width="80" height="42"/>
+                                                <rect key="frame" x="0.0" y="297.5" width="80" height="42.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2957,7 +2963,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EC1-JY-m51">
-                                        <rect key="frame" x="90" y="0.0" width="294" height="295"/>
+                                        <rect key="frame" x="90" y="0.0" width="294" height="340"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập email đang nhập" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="clf-QL-fC6" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="0.0" y="0.0" width="294" height="35"/>
@@ -2975,8 +2981,16 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập tên nhân viên" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zkw-vt-adJ" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ViD-cm-d74" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="0.0" y="90" width="294" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="UNr-QO-XrR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập tên nhân viên" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zkw-vt-adJ" customClass="TextField" customModule="Material">
+                                                <rect key="frame" x="0.0" y="135" width="294" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="bsG-dZ-nDC"/>
                                                 </constraints>
@@ -2984,7 +2998,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0B-yZ-Wny">
-                                                <rect key="frame" x="0.0" y="135" width="294" height="70"/>
+                                                <rect key="frame" x="0.0" y="180" width="294" height="70"/>
                                                 <subviews>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="1kK-Bf-Gwp">
                                                         <rect key="frame" x="0.0" y="0.0" width="294" height="32"/>
@@ -3022,7 +3036,7 @@
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập số điện thoại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G1D-zd-UMN" customClass="TextField" customModule="Material">
-                                                <rect key="frame" x="0.0" y="215" width="294" height="35"/>
+                                                <rect key="frame" x="0.0" y="260" width="294" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="lKu-Hi-uci"/>
                                                 </constraints>
@@ -3030,7 +3044,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập địa chỉ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yKC-Wx-YRT" customClass="TextField" customModule="Material">
-                                                <rect key="frame" x="0.0" y="260" width="294" height="35"/>
+                                                <rect key="frame" x="0.0" y="305" width="294" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="sdI-3o-CG6"/>
                                                 </constraints>
@@ -3045,7 +3059,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="746-zX-I54" customClass="RaisedButton" customModule="Material">
-                                <rect key="frame" x="40" y="537" width="162" height="35"/>
+                                <rect key="frame" x="40" y="582" width="162" height="35"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Rn1-Dp-Zcv"/>
@@ -3061,7 +3075,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KfZ-xB-cr5" customClass="RaisedButton" customModule="Material">
-                                <rect key="frame" x="212" y="536.5" width="162" height="36"/>
+                                <rect key="frame" x="212" y="581.5" width="162" height="36"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Hủy">
@@ -3096,7 +3110,8 @@
                         <outlet property="swStaffAuthority" destination="1kK-Bf-Gwp" id="crb-Hk-YvV"/>
                         <outlet property="swStaffAuthority2" destination="0VR-su-MPX" id="s3Z-hJ-Ksr"/>
                         <outlet property="txtEmail" destination="clf-QL-fC6" id="dBQ-yY-2FX"/>
-                        <outlet property="txtPassword" destination="Zgg-6W-Dut" id="6iF-SD-HH5"/>
+                        <outlet property="txtPassword" destination="Zgg-6W-Dut" id="YZb-c3-4Ng"/>
+                        <outlet property="txtRePassword" destination="ViD-cm-d74" id="BuE-AD-UNY"/>
                         <outlet property="txtStaffAddress" destination="yKC-Wx-YRT" id="PnH-yv-AOA"/>
                         <outlet property="txtStaffName" destination="Zkw-vt-adJ" id="GCr-D9-m8m"/>
                         <outlet property="txtStaffPhone" destination="G1D-zd-UMN" id="rBU-sH-rUh"/>
