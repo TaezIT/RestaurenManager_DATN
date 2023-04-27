@@ -72,7 +72,7 @@ class MenuViewController: UIViewController {
             } else if let data = data {
                 
                 self?.dishData = [data]
-                if !(self?.dishCategoryData.isEmpty ?? true) {
+                if !(self?.dishData.isEmpty ?? true) {
                     self?.setupData()
                 }
             }

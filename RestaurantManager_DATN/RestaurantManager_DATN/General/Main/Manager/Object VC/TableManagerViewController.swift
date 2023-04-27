@@ -63,15 +63,18 @@ class TableManagerViewController: UIViewController {
         let number = txtTableNumber.text ?? ""
         let size = ((txtTableSize.text ?? "") as NSString).intValue
         let db = Firestore.firestore()
-        if table == nil {
-            table = BanAn()
-        }
+ 
         var checkCurrentTable = false
         for item in tableData {
-            if item.sobanan == number {
+            if item.sobanan == number && table == nil {
                 checkCurrentTable = true
             }
         }
+        
+        if table == nil {
+            table = BanAn()
+        }
+        
         if !checkCurrentTable {
             db.collection("BanAn").document(table!.idbanan!).setData([
                 "idbanan": table!.idbanan!,
