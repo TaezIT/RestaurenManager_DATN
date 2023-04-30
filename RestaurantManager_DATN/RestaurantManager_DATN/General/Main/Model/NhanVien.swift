@@ -137,7 +137,7 @@ struct NhanVien: Decodable {
         var datas = [NhanVien]()
         let db = Firestore.firestore()
         
-        db.collection("NhanVien").whereField("quyen", in: [1,4,5]).whereField("daxoa", isEqualTo: 0).order(by: "tennhanvien").getDocuments { (snapshot, err) in
+        db.collection("NhanVien").whereField("quyen", isEqualTo: 1 ).whereField("daxoa", isEqualTo: 0).order(by: "tennhanvien").getDocuments { (snapshot, err) in
             if err != nil {
                 completion(nil, err)
                 

@@ -55,10 +55,7 @@ class RestaurantViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         setupViews()
-        
         fetchData()
         
         Timer.scheduledTimer(withTimeInterval: 30, repeats: true) {_ in
@@ -111,17 +108,9 @@ class RestaurantViewController: UIViewController {
                 self?.setupData()
             }
         }
-        
-//        self.navigationController?.navigationBar.prefersLargeTitles = false
-        
-//        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { (timer) in
-//            self.tableRefreshControl.endRefreshing()
-//            self.navigationController?.navigationBar.prefersLargeTitles = true
-//        }
     }
     
     func setupData() {
-//        userProfileNameLabel.text = "\(String(restaurantStaff.first_name)) \(String(restaurantStaff.last_name))"
         tableRefreshControl.endRefreshing()
         
         for (index, table)in tableData.enumerated() {
@@ -133,7 +122,6 @@ class RestaurantViewController: UIViewController {
         }
         currentTableData = tableData
         self.tableCollectionView.reloadData()
-        
         checkBadgeValue()
     }
     
@@ -156,7 +144,6 @@ class RestaurantViewController: UIViewController {
     }
     
     @IBAction func billHistoryButtonTapped(_ sender: Any) {
-//        self.performSegue(withIdentifier: segueProperties.toTakeawayVCSegue.rawValue, sender: self)
         if App.shared.staffInfo?.quyen != 1 && App.shared.staffInfo?.quyen != 2 {
             return
         }
