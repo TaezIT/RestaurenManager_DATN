@@ -74,11 +74,13 @@ final class CartViewController: UIViewController {
                     delegate?.table?.bill?.orderList?[index].ngaytao = dathanhtoan == 1 ? ngaytao : Date()
                     delegate?.table?.bill?.orderList?[index].trangthai = dathanhtoan == 1 ? 3 : 0
                 }
+                
                 if vc.bill?.orderList == nil {
                     vc.bill?.orderList = delegate?.table?.bill?.orderList ?? []
                 } else {
                     vc.bill?.orderList?.append(contentsOf: delegate?.table?.bill?.orderList ?? [])
                 }
+                
                 vc.lbTotalBill.text = "Tổng hóa đơn: " + (bill?.getTotalPayment().splittedByThousandUnits() ?? "0")
                 
                 vc.orderTableView.reloadData()
