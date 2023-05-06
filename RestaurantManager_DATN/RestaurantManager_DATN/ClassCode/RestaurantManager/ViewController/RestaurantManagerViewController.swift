@@ -20,6 +20,7 @@ class RestaurantManagerViewController: UIViewController {
     var currentBillData: [BillModel] = []
     var isNotAuthored: Bool = true
     let restaurentManagerViewModel = RestaurentManagerViewModel()
+    
     private lazy var tableRefreshControl: UIRefreshControl = {
         let refresh = UIRefreshControl()
         refresh.addTarget(self, action: #selector(fetchData), for: .valueChanged)
@@ -29,6 +30,11 @@ class RestaurantManagerViewController: UIViewController {
     //MARK: -Life cycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setUpViews()
+        self.fetchData()
+        Timer.scheduledTimer(withTimeInterval: 30, repeats: true) {_ in
+            self.fetchData()
+        }
     }
 
     //MARK: -Action
@@ -47,7 +53,7 @@ class RestaurantManagerViewController: UIViewController {
         var isTableLoaded = false
         var isBillLoaded = false
         
-        RestaurentManagerViewModel.fetchAllDataAvailable { [weak self] (data, error) in
+        restaurentManagerViewModel.fetchAllDataAvailable { [weak self] (data, error) in
             if error != nil {
                 print(error.debugDescription)
             } else if let data = data {
@@ -58,6 +64,19 @@ class RestaurantManagerViewController: UIViewController {
                 self?.setupData()
             }
         }
+        
+        restaurentManagerViewModel.fetchUnpaidBill { [weak self] (data, error) in
+            if error != nil {
+                print(error.debugDescription)
+            } else if let data = data {
+                self?.currentBillData = data
+            }
+            isBillLoaded = true
+            if isTableLoaded {
+                self?.setupData()
+            }
+        }
+        
     }
     
     @objc func handleRefreshScroll(){
@@ -118,21 +137,30 @@ extension RestaurantManagerViewController: UICollectionViewDataSource, UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueCell(TableCollectionViewCell.self, forIndexPath: indexPath)
+        if let bill = currentTableData[indexPath.item].bill, let served = bill.isBillServed(){
+            if served {
+                cell.state = .inUsed
+            } else {
+                cell.state = .waiting
+            }
+        } else {
+            cell.state = .empty
+        }
         cell.configViews(data: currentTableData[indexPath.item])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        if isNotAuthored {
-//            return
-//        }
-//        let presentHandler = PresentHandler()
-//        guard let cell = collectionView.cellForItem(at: indexPath) as? TableCollectionViewCell else { return }
-//        if cell.state == .empty {
+        if isNotAuthored {
+            return
+        }
+        let presentHandler = PresentHandler()
+        guard let cell = collectionView.cellForItem(at: indexPath) as? TableCollectionViewCell else { return }
+        if cell.state == .empty {
 //            presentHandler.presentMakeOrderVC(self, tableData: currentTableData[indexPath.item])
-//        } else {
+        } else {
 //            presentHandler.presentTableBillDetailVC(self, table: currentTableData[indexPath.item])
-//        }
+        }
     }
     
     

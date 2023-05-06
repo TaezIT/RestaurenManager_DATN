@@ -2,7 +2,7 @@
 //  App.swift
 //  RestaurantManager_DATN
 //
-//  Created by Pham Tuan Anh on 29/01/2023.
+//  Created by Pham Tuan Anh on 29/03/2023.
 //  Copyright © 2023 Pham Tuan Anh. All rights reserved.
 //
 
@@ -75,4 +75,10 @@ final class App: UINavigationController {
                 self.window.rootViewController = rootViewController
             }, completion: nil)
         }
+    func changeViewController(_ rootViewController: UITabBarController) {
+           UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: {
+               self.window.rootViewController = rootViewController
+           }, completion: nil)
+       }
+        
 }

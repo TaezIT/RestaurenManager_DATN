@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  RestaurantManager_DATN
 //
-//  Created by Pham Tuan Anh on 29/01/2023.
+//  Created by Pham Tuan Anh on 29/03/2023.
 //  Copyright © 2023 Pham Tuan Anh. All rights reserved.
 //
 
@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             App.shared.window = window
             App.shared.startInterface()
         }
-        
         return true
     }
 

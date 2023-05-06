@@ -2,7 +2,7 @@
 //  MainTabbarController.swift
 //  BaoThanhNien
 //
-//  Created by Pham Tuan Anh on 02/01/2023.
+//  Created by Pham Tuan Anh on 02/03/2023.
 //
 
 import Foundation
@@ -19,6 +19,10 @@ class MainTabbarController: UITabBarController {
         super.viewDidLoad()
         self.initTabbar()
         self.setShadow()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     func initTabbar() {

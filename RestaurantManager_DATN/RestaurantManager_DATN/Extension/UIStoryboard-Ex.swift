@@ -2,7 +2,7 @@
 //  UIStoryboard+.swift
 //  RestaurantManager_DATN
 //
-//  Created by Pham Tuan Anh on 30/01/2023.
+//  Created by Pham Tuan Anh on 30/03/2023.
 //  Copyright © 2023 Pham Tuan Anh. All rights reserved.
 //
 
@@ -29,6 +29,15 @@ extension UIStoryboard {
         }
         return vc
     }
+    
+    var MainTabbar: MainTabbarController {
+        guard let vc = UIStoryboard.main.instantiateViewController(withIdentifier: "MainTabbarController") as? MainTabbarController else {
+            fatalError("MainTabbarController couldn't be found in Storyboard file")
+        }
+        return vc
+    }
+    
+    
     
     var LogoViewController: UIViewController {
         let vc = UIStoryboard.main.instantiateViewController(withIdentifier: "LogoViewController")
